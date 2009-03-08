@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @paper.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @paper.title %>
+</p>
+<p>
+  <b>Author:</b>
+  <%=h @paper.author %>
+</p>
+<p>
+  <b>Description:</b>
+  <%=h @paper.description %>
+</p>
+<p>
+  <b>Picture:</b>
+  <%=h @paper.picture %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @paper.body %>
+</p>
+
+<p>
+  <b>Admin?</b>
+<%=h @paper.admin? ? "TRUE" : "FALSE" %>
+</p>
+<%= link_to 'Edit', edit_paper_path(@paper) %> |
+<%= link_to 'Back', papers_path %>
