@@ -7,10 +7,7 @@
   <b>Title:</b>
   <%=h @paper.title %>
 </p>
-<p>
-  <b>Author:</b>
-  <%=h @paper.author %>
-</p>
+
 <p>
   <b>Description:</b>
   <%=h @paper.description %>
@@ -24,10 +21,33 @@
   <b>Body:</b>
   <%=h @paper.body %>
 </p>
+<p>
+  <b>Category:</b>
+  <%=h @paper.category %>
+</p>
+<p>
+  <b>Language:</b>
+  <%=h @paper.language %>
+</p>
 
 <p>
   <b>Admin?</b>
 <%=h @paper.admin? ? "TRUE" : "FALSE" %>
 </p>
+<p>
+  <b>Author's name :</b>
+  <%=h @paper.author_name %>
+</p>
+
+<p>
+  <b>Author's email :</b>
+  <%=h @paper.author_email %>
+</p>
+<p>
+  <b>Author's organisation :</b>
+  <%=h @paper.author_organisation %>
+</p>
+
+
 <%= link_to 'Edit', edit_paper_path(@paper) %> |
 <%= link_to 'Back', papers_path %>

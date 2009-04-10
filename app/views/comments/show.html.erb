@@ -1,3 +1,19 @@
+<h1>Comment on <%= @paper.title %></h1>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path %>
+<p>
+  <b>Name:</b>
+  <%=h @comment.name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%=h @comment.email %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @comment.text %>
+</p>
+
+<%= link_to 'Edit', edit_paper_comment_path(@paper, @comment) %> |
+<%= link_to 'Back', paper_comments_path(@paper) %>
+

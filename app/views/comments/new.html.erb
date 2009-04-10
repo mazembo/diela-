@@ -1,11 +1,23 @@
 <h1>New comment</h1>
 
-<%= error_messages_for :comment %>
+<% form_for([@paper, @comment]) do |f| %>
+  <%= f.error_messages %>
 
-<% form_for(@comment) do |f| %>
   <p>
-    <%= f.submit "Create" %>
+	<%= f.label :name %><br />
+	<%= f.text_field :name %>
+  </p>
+  <p>
+	<%= f.label :Email %><br />
+	<%= f.text_field :email %>
+  </p>
+  <p>
+	<%= f.label :Body %><br />
+	<%= f.text_area :text %>
+  </p>
+  <p>
+	<%= f.submit "Create" %>
   </p>
 <% end %>
 
-<%= link_to 'Back', comments_path %>
+<%= link_to 'Back', paper_comments_path(@paper) %>

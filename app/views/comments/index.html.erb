@@ -1,18 +1,27 @@
-<h1>Listing comments</h1>
+
+<h1>Comments for <%= @paper.title %></h1>
 
 <table>
   <tr>
+	<th>Name</th>
+	<th>Email</th>
+	<th>Text</th>
   </tr>
 
 <% for comment in @comments %>
   <tr>
-    <td><%= link_to 'Show', comment %></td>
-    <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-    <td><%= link_to 'Destroy', comment, :confirm => 'Are you sure?', :method => :delete %></td>
+	<td><%=h comment.name %></td>
+	<td><%=h comment.Email %></td>
+	<td><%=h comment.text %></td>
+	<td><%= link_to 'Show', paper_comment_path(@paper, comment) %></td>
+	<td><%= link_to 'Edit', edit_paper_comment_path(@paper, comment) %></td>
+	<td><%= link_to 'Destroy', paper_comment_path(@paper, comment), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New comment', new_comment_path %>
+<%= link_to 'New comment', new_paper_comment_path(@paper) %>
+<%= link_to 'Back to article', @paper %>
+

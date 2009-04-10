@@ -4,21 +4,30 @@
   <tr>
     <th>Name</th>
     <th>Title</th>
-    <th>Author</th>
+    <th>category</th>
+    <th>language</th>
     <th>Description</th>
     <th>Picture</th>
     <th>Body</th>
+    <th>Admin?</th>
+    <th>author's name</th>
+    <th>author's email</th>
+    <th>author's organisation</th>
   </tr>
 
 <% for paper in @papers %>
   <tr>
     <td><%=h paper.name %></td>
     <td><%=h paper.title %></td>
-    <td><%=h paper.author %></td>
+    <td><%=h paper.category %></td>
+    <td><%=h paper.language %></td>
     <td><%=h paper.description %></td>
     <td><%=h paper.picture %></td>
     <td><%=h paper.body %></td>
-     <td><%=h paper.admin? ? "TRUE" : "FALSE" %></td>
+    <td><%=h paper.admin? ? "TRUE" : "FALSE" %></td>
+    <td><%=h paper.author_name %></td>
+    <td><%=h paper.author_email %></td>
+    <td><%=h paper.author_organisation %></td> 
     <td><%= link_to 'Show', paper %></td>
     <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
     <td><%= link_to 'Destroy', paper, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 17) do
 
   create_table "authors", :force => true do |t|
     t.string   "author_name"
@@ -19,13 +19,20 @@ ActiveRecord::Schema.define(:version => 10) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.text     "comment"
+  create_table "authors_papers", :id => false, :force => true do |t|
+    t.integer  "author_id"
     t.integer  "paper_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "comments", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.integer  "paper_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "text"
   end
 
   create_table "pages", :force => true do |t|
@@ -44,13 +51,14 @@ ActiveRecord::Schema.define(:version => 10) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
-    t.integer  "parent_id"
-    t.string   "navlabel"
-    t.integer  "position"
     t.string   "picture"
     t.text     "description"
     t.string   "category"
-    t.integer  "author_id"
+    t.string   "author_name"
+    t.string   "author_email"
+    t.string   "author_organisation"
+    t.string   "language"
+    t.integer  "position",            :default => 0
   end
 
   create_table "sheets", :force => true do |t|

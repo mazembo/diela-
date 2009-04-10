@@ -36,9 +36,7 @@ test:
 
 production:
   adapter: mysql
-  encoding: utf8
   database: learningrails_production
-  pool: 5
-  username: root
-  password: 
+  username: mazembo 
+  password: nditukulu
   host: localhost

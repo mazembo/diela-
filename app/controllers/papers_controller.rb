@@ -1,7 +1,7 @@
 class PapersController < ApplicationController
  before_filter :login_required
  before_filter :loadmetadata
- 
+
  def loadmetadata
  @pagetitle = "Page Administration"
  end
