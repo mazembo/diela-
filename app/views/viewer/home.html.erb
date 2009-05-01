@@ -18,11 +18,18 @@
 	<div class="comments_count"><%= link_to pluralize(paper.comments.size, 'comment'), paper_path(:id => paper, :anchor => 'comments') %></div>
   </div>
   <div class="main">
-	<h2><%= link_to_unless_current h(paper.title), paper %></h2>
-	<div class="picture"><%=h paper.picture %></div>
-	<div class="description"><%=h paper.description %></div>
-	<div class="author">By <%=h paper.author_name %> <%=h paper.author_email %>  </div>
-	<div class="author">From <%=h paper.author_organisation %></div>
+	<h2><%= link_to h(paper.title),{:controller =>'viewer', :action =>'showE', :id =>paper.id}%></h2>
+	<table>
+		<tr>
+	<td><div> <img class="list-image" src="<%= paper.picture %>"/></div></td>
+	<td>
+		<div class="description"><%=h paper.description %></div>
+		<div class="author">By <%=h paper.author_name %> </div>
+	    
+	</td>
+	    </tr>
+	</table>
+	
 	</div>
 	</div>
 	</div>

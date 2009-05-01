@@ -3,21 +3,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title><%= @pagetitle || (@page && @page.title)|| "Learning Rails" %></title>
+    <title><%= @pagetitle || (@page && @page.title)|| "Forum of Congolese Organisations in South Africa" %></title>
 		<%= stylesheet_link_tag 'learningrails', 'application' %>
-		<%= javascript_include_tag 'jquery', 'application' %>
+		<%= javascript_include_tag :defaults %>
   </head>
   <body>
 		<div id='pagewrapper'>
 			<div id='header'>
+				
+				
 				<p>Forum des Organisations Congolaises en Afrique du Sud - FOCAS </p>
-		  </div>
+		           
+				</tr>
+			 </div>
 			<div id='navbar'>
 				<ul>
-					<li><%= link_to 'Home', view_page_path('home') %></li>
-					<li><%= link_to 'Resources', view_page_path('resources') %></li>
-				<li><%= link_to 'About Us', view_page_path('about us') %></li>
-				<li><%= link_to 'Contact Us', view_page_path('contact us') %></li>
+			<li><%= link_to 'Home', {:controller =>'viewer', :action =>'show', :name => 'home'} %></li>
+			<li><%= link_to 'About us', {:controller =>'viewer', :action =>'show', :name => 'about us'} %></li>
+			<li><%= link_to 'Programmes', {:controller =>'viewer', :action =>'show', :name => 'programmes'} %></li>
+			<li><%= link_to 'Future activities', {:controller =>'viewer', :action =>'show', :name => 'future activities'} %></li>
+			<li><%= link_to 'Staff', {:controller =>'viewer', :action =>'show', :name => 'staff'} %></li>
+			<li><%= link_to 'Opportunities', {:controller =>'viewer', :action =>'show', :name => 'opportunities'} %></li>
+			<li><%= link_to 'Member organisations', {:controller =>'viewer', :action =>'show', :name => 'member organisations'} %></li>
+			<li><%= link_to 'Contact Us', {:controller =>'viewer', :action =>'show', :name => 'contact us'} %></li>
 					<li><% if logged_in? %>
 								<%= link_to "Log Out", logout_path %>
 							<% else %>
@@ -27,16 +35,21 @@
 				</ul>
 		  <div>
 		</div>
+		<div id="container">
+		<div id="main">
 		<div id='content1'>
 			<h2><%= flash[:notice] %></h2>
 
       <%= yield %>
 		</div>
+		</div>
+		
 		
 	 <div id="side">
 		<%= yield(:side) || render(:partial => 'shared/side') %>
 	  </div>
 	  <div class="clear"></div>
+	</div>
 	</div>
 	
 		<div id='footer'>

@@ -1,0 +1,28 @@
+<% form_for @comment do |f| %>
+  <%= error_messages_for :comment %>
+  <noscript><p>Javascript required to add comment.</p></noscript>
+  <div>
+    <%= f.hidden_field :paper_id %>
+  </div>
+  
+  <p>
+    <%= f.label :name, 'Name', :class => 'required' %> <span class="info">(required)</span><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %> <span class="info">(not shown)</span><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :where_from, 'Where from ?', :class => 'required' %><br />
+    <%= f.text_field :where_from %>
+  </p>
+  <p>
+    <%= f.label :text, 'Comment', :class => 'required' %><br />
+    <%= f.text_area :text, :rows => '30', :cols => 35 %>
+  </p>
+  <p>
+    <%= f.submit "Preview", :name => 'preview_button' %>
+    <%= f.submit "Submit" %>
+  </p>
+<% end %>

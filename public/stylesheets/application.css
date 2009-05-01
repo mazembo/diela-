@@ -18,12 +18,13 @@ a img {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 h2, h2 a {
-  color: #E98C08;
-  font-size: 18px;
+  color: #cc0000;
+  font-size: 12px;
+     
 }
 
 h3 {
@@ -78,11 +79,17 @@ ul {
 #main {
   width: 500px;
   float: left;
+ 
 }
+#main2 {
+  width: 800px;
+  float: left;
+}
+
 
 #side {
   margin-left: 530px;
-  width: 150px;
+  width: 180px;
   color: #333;
   font-size: 11px;
   padding-top: 20px;
@@ -105,7 +112,7 @@ ul {
 #side ul li {
   padding: 0;
   margin: 2px 0;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 #side .sponsor {
@@ -114,6 +121,11 @@ ul {
 
 #side #navigation {
   color: #999;
+}
+
+#product-list .list-image {
+  width:        300px;
+  height:       150px;
 }
 
 .clear {
@@ -126,7 +138,7 @@ ul {
 }
 
 .content, .main, #flash_notice, #flash_error {
-  margin-left: 100px;
+  margin-left: 1px;
 }
 
 .episode .side {
@@ -147,6 +159,13 @@ ul {
 
 .episode .description {
   margin-bottom: 2px;
+  font-size: 10px;
+  text-align: justify;
+}
+.episode .author {
+  margin-bottom: 2px;
+  font-size: 10px;
+  text-align: left;
 }
 
 .episode .number {
@@ -371,3 +390,4 @@ ul {
   font-size: 12px;
   border-collapse: collapse;
 }
+

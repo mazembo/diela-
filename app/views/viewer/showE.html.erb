@@ -1,0 +1,56 @@
+<% form_tag papers_path, :method => 'get' do %>
+  <p class="content">
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<div class="episodes">
+<div class="side">
+	
+</div>
+<div class="main">
+	<h1><%=h @paper.title %><h1>
+	<div> <img class="list-image" src="<%= @paper.picture2 %>"/></div>
+	</div>
+<div class="notes">
+	<%= textilize @paper.body %>
+</div>
+	<div class="clear"></div>
+	<div class="author">By <%=h @paper.author_name %>, <%=h @paper.author_email %>,from<%=h @paper.author_organisation %></div>
+	<div class="published_at">Published on <%= @paper.created_at.strftime('%b %d, %Y') %></div>
+ </div>
+<% unless @paper.comments.empty? %>
+  <h3 class="content" id="comment_count">
+	<%= pluralize @paper.comments.size, 'comment' %>
+  </h3>
+  <div id="comments">
+  <%= render :partial => 'comments/comment', :collection => @paper.comments %>
+  </div>
+<% end %>
+<h3>Add your comment:</h3>
+  <% form_remote_for Comment.new(:paper => @paper) do |f| %>
+  <%= error_messages_for :comment %>
+  <noscript><p>Javascript required to add comment.</p></noscript>
+  
+	<%= f.hidden_field :paper_id, :value => @paper.id %>
+  
+  <p>
+	<%= f.label :name, 'Name', :class => 'required' %> <span class="info">(required)</span><br />
+	<%= f.text_field :name %>
+  </p>
+  <p>
+	<%= f.label :email %> <span class="info">(not shown)</span><br />
+	<%= f.text_field :email %>
+  </p>
+  <p>
+	<%= f.label :where_from, 'Where from ?', :class => 'required' %><br />
+	<%= f.text_field :where_from %>
+  </p>
+  <p>
+	<%= f.label :text, 'Comment', :class => 'required' %><br />
+	<%= f.text_area :text, :rows => '15', :cols => 35 %>
+  </p>
+  <p>
+	<%= f.submit "Submit" %>
+  </p>
+<% end %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 17) do
+ActiveRecord::Schema.define(:version => 21) do
 
   create_table "authors", :force => true do |t|
     t.string   "author_name"
@@ -33,6 +33,9 @@ ActiveRecord::Schema.define(:version => 17) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "text"
+    t.string   "user_ip"
+    t.string   "user_agent"
+    t.string   "where_from"
   end
 
   create_table "pages", :force => true do |t|
@@ -59,6 +62,8 @@ ActiveRecord::Schema.define(:version => 17) do
     t.string   "author_organisation"
     t.string   "language"
     t.integer  "position",            :default => 0
+    t.datetime "published_date"
+    t.string   "picture2"
   end
 
   create_table "sheets", :force => true do |t|

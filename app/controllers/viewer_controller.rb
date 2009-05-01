@@ -1,8 +1,9 @@
 class ViewerController < ApplicationController
   
-  def show
-    @page = Paper.find_by_name(params[:name])
-    
+  def showE
+   @paper = Paper.find_by_id(params[:id])
+   @comment = Comment.new(:paper => @paper)
+   
   end
   
   def home
