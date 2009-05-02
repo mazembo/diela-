@@ -36,7 +36,7 @@ test:
 
 production:
   adapter: mysql
-  database: learningrails_production
+  database: focasdb
   username: mazembo 
   password: nditukulu
   host: localhost
