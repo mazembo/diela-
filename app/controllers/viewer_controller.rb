@@ -6,9 +6,9 @@ class ViewerController < ApplicationController
    
   end
   
-  def home
-  @papers = Paper.find(:all, 
-                      :conditions => ["category = 'article' and language = 'english'"])
+  def index
+  @papers = Paper.paginated_search (params[:search], params[:page])
+                
                      
     
   end
@@ -16,6 +16,11 @@ class ViewerController < ApplicationController
   def homef
   @paper = Paper.find(:all, 
                       :conditions => ["category = 'article' and language = 'french'"])
+  end
+  
+  def show
+   @paper = Paper.find_by_name(params[:name])
+    
   end
   
 end

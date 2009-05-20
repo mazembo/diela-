@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.root :controller => 'viewer', :action => 'home'
+  map.root :controller => 'viewer', :action => 'index'
   
   map.resources :comments
 
@@ -11,7 +11,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :session
 
   map.resources :papers
-  
+
+   
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   
   map.login '/login', :controller => 'sessions', :action => 'new'

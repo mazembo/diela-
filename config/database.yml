@@ -16,8 +16,7 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 development:
   adapter: mysql
-  encoding: utf8
-  database: learningrails_development
+  database: learningrails_development 
   username: root
   password: nditukulu
   host: localhost
@@ -36,7 +35,7 @@ test:
 
 production:
   adapter: mysql
-  database: focasdb
-  username: mazembo 
+  database: focas
+  username: root
   password: nditukulu
   host: localhost
