@@ -2,7 +2,7 @@ class ViewerController < ApplicationController
   
   def showE
    @paper = Paper.find_by_id(params[:id])
-   @comment = Comment.new(:paper => @paper)
+   @comment = Comment.new
    
   end
   

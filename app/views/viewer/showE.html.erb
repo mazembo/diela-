@@ -28,9 +28,9 @@
   </div>
 <% end %>
 <h3>Add your comment:</h3>
-  <% form_remote_for Comment.new(:paper => @paper) do |f| %>
-  <%= error_messages_for :comment %>
-  <noscript><p>Javascript required to add comment.</p></noscript>
+  <% form_for @comment do |f| %>
+  <%= f.error_messages %>
+ 
   
 	<%= f.hidden_field :paper_id, :value => @paper.id %>
   

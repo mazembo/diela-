@@ -42383,3 +42383,1538 @@ Rendering viewer/index
 Rendered shared/_navigation (0.10100)
 Rendered shared/_side (0.22100)
 Completed in 2.44400 (0 reqs/sec) | Rendering: 0.77200 (31%) | DB: 1.79200 (73%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-05-28 23:33:40) [GET]
+  Session ID: 9d40bdcb4411c0d7dbf886912e52db45
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.070000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.230000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.091000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.030000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.06000)
+Rendered shared/_side (0.09100)
+Completed in 1.25200 (0 reqs/sec) | Rendering: 0.61100 (48%) | DB: 0.48100 (38%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-05-28 23:33:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.030000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.010000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.07000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.02000)
+Completed in 0.98100 (1 reqs/sec) | Rendering: 0.77100 (78%) | DB: 0.07000 (7%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing ViewerController#create (for 127.0.0.1 at 2009-05-28 23:34:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWYyZjk5MzliM2QwNDg1NmIzMjlmYWI0MzlkMjIx%0AMjciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--10e7c7771f0a92c8fd16ee625fbf55c3efc4090d
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"bb1bd3d34c121613795426e02587e85a7f416e61", "action"=>"create", "controller"=>"viewer", "comment"=>{"name"=>"Eddy Mazembo", "text"=>"hi ", "where_from"=>"Kin ", "paper_id"=>"9", "email"=>"eddy@gnet.com"}}
+
+
+ActionController::UnknownAction (No action responded to create):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-05-28 23:35:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWYyZjk5MzliM2QwNDg1NmIzMjlmYWI0MzlkMjIx%0AMjciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--10e7c7771f0a92c8fd16ee625fbf55c3efc4090d
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.030000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.000000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.78100 (1 reqs/sec) | Rendering: 0.29000 (37%) | DB: 0.07000 (8%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing ViewerController#create (for 127.0.0.1 at 2009-05-28 23:35:28) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWYyZjk5MzliM2QwNDg1NmIzMjlmYWI0MzlkMjIx%0AMjciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--10e7c7771f0a92c8fd16ee625fbf55c3efc4090d
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"bb1bd3d34c121613795426e02587e85a7f416e61", "action"=>"create", "controller"=>"viewer", "comment"=>{"name"=>"Eddy Mazembo", "text"=>"hi ", "where_from"=>"Kin ", "paper_id"=>"9", "email"=>"eddy@gnet.com"}}
+
+
+ActionController::UnknownAction (No action responded to create):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ViewerController#create (for 127.0.0.1 at 2009-05-28 23:39:03) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNWYyZjk5MzliM2QwNDg1NmIzMjlmYWI0MzlkMjIx%0AMjciCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--10e7c7771f0a92c8fd16ee625fbf55c3efc4090d
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"bb1bd3d34c121613795426e02587e85a7f416e61", "action"=>"create", "controller"=>"viewer", "comment"=>{"name"=>"Eddy Mazembo", "text"=>"hi ", "where_from"=>"Kin ", "paper_id"=>"9", "email"=>"eddy@gnet.com"}}
+
+
+ActionController::UnknownAction (No action responded to create):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-01 21:15:32) [GET]
+  Session ID: 3843655bfdc920452d104b95f4b25aa0
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.241000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.481000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.100000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.080000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.12000)
+Rendered shared/_side (0.27000)
+Completed in 1.71200 (0 reqs/sec) | Rendering: 0.88100 (51%) | DB: 0.92200 (53%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:15:48) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.030000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.020000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.09000)
+Rendered comments/_comment (0.00000)
+
+
+ActionView::TemplateError (undefined method `paper_comments_path' for #<ActionView::Base:0x46db664>) on line #31 of viewer/showE.html.erb:
+28:   </div>
+29: <% end %>
+30: <h3>Add your comment:</h3>
+31:   <% form_for ([@paper, @comment]) do |f| %>
+32:   <%= f.error_messages %>
+33:  
+34:   
+
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/polymorphic_routes.rb:96:in `send!'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/polymorphic_routes.rb:96:in `polymorphic_url'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/polymorphic_routes.rb:103:in `polymorphic_path'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/helpers/form_helper.rb:201:in `apply_form_for_options!'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/helpers/form_helper.rb:175:in `form_for'
+    app/views/viewer/showE.html.erb:31:in `_run_erb_47app47views47viewer47showE46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:20:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.000000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.000000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.02000)
+Completed in 1.11100 (0 reqs/sec) | Rendering: 0.40000 (36%) | DB: 0.05000 (4%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 21:20:59) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Mazembo", "text"=>"here we are", "where_from"=>"jhb", "paper_id"=>"9", "email"=>"mazemb_eddy@yahoo.fr"}}
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.150000)[0m   [0;1mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Mazembo', '2009-06-01 21:20:59', 'here we are', NULL, 'jhb', 9, NULL, '2009-06-01 21:20:59', 'mazemb_eddy@yahoo.fr')[0m
+  [4;35;1mSQL (0.040000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/papers/9
+Completed in 0.36100 (2 reqs/sec) | DB: 0.23000 (63%) | 302 Found [http://localhost/comments]
+
+
+Processing PapersController#show (for 127.0.0.1 at 2009-06-01 21:21:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"papers"}
+  [4;36;1mPaper Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.03000)
+Completed in 0.91100 (1 reqs/sec) | Rendering: 0.78100 (85%) | DB: 0.04000 (4%) | 200 OK [http://localhost/papers/9]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:21:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.000000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.02000)
+Completed in 0.53000 (1 reqs/sec) | Rendering: 0.29000 (54%) | DB: 0.04000 (7%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 21:30:59) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Clement ", "text"=>"Hi I am ok what about you", "where_from"=>"Rome", "paper_id"=>"9", "email"=>"phemac@yahoo.fr"}}
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.000000)[0m   [0;1mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Clement ', '2009-06-01 21:30:59', 'Hi I am ok what about you', NULL, 'Rome', 9, NULL, '2009-06-01 21:30:59', 'phemac@yahoo.fr')[0m
+  [4;35;1mSQL (0.050000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/viewer/showE/@comment.paper_id
+Completed in 0.16000 (6 reqs/sec) | DB: 0.07000 (43%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:31:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"format"=>"paper_id", "action"=>"showE", "id"=>"@comment", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.031000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '@comment') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+
+
+ActionController::MissingTemplate (Missing template viewer/showE.paper_id.erb in view path C:/focas/app/views):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1270:in `assert_existence_of_template_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1099:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:269:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 21:34:15) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Clement ", "text"=>"Hi I am ok what about you", "where_from"=>"Rome", "paper_id"=>"9", "email"=>"phemac@yahoo.fr"}}
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.000000)[0m   [0mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Clement ', '2009-06-01 21:34:15', 'Hi I am ok what about you', NULL, 'Rome', 9, NULL, '2009-06-01 21:34:15', 'phemac@yahoo.fr')[0m
+  [4;36;1mSQL (0.060000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/viewer/showE/@paper.id
+Completed in 0.29000 (3 reqs/sec) | DB: 0.07000 (24%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:34:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"format"=>"id", "action"=>"showE", "id"=>"@paper", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '@paper') LIMIT 1[0m
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+
+
+ActionController::MissingTemplate (Missing template viewer/showE.id.erb in view path C:/focas/app/views):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1270:in `assert_existence_of_template_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1099:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:269:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:34:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.000000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.010000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.03000)
+Completed in 0.59100 (1 reqs/sec) | Rendering: 0.33000 (55%) | DB: 0.04000 (6%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 21:35:54) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Papi ", "text"=>"Here we are ... Come to us ", "where_from"=>"Japan", "paper_id"=>"9", "email"=>"pai@yahoo.fr"}}
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.000000)[0m   [0;1mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Papi ', '2009-06-01 21:35:54', 'Here we are ... Come to us ', NULL, 'Japan', 9, NULL, '2009-06-01 21:35:54', 'pai@yahoo.fr')[0m
+  [4;35;1mSQL (0.070000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/viewer/showE
+Completed in 0.25000 (4 reqs/sec) | DB: 0.10000 (40%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:35:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"action"=>"showE", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.060000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` IS NULL) LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #12 of viewer/showE.html.erb:
+9: 	
+10: </div>
+11: <div class="main">
+12: 	<h1><%=h @paper.title %><h1>
+13: 	<div> <img class="list-image" src="<%= @paper.picture2 %>"/></div>
+14: 	</div>
+15: <div class="notes">
+
+    app/views/viewer/showE.html.erb:12:in `_run_erb_47app47views47viewer47showE46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 21:41:27) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Papi ", "text"=>"Here we are ... Come to us ", "where_from"=>"Japan", "paper_id"=>"9", "email"=>"pai@yahoo.fr"}}
+  [4;35;1mComment Columns (0.090000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.000000)[0m   [0mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Papi ', '2009-06-01 21:41:27', 'Here we are ... Come to us ', NULL, 'Japan', 9, NULL, '2009-06-01 21:41:27', 'pai@yahoo.fr')[0m
+  [4;36;1mSQL (0.150000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/viewer/home
+Completed in 0.31000 (3 reqs/sec) | DB: 0.24000 (77%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#home (for 127.0.0.1 at 2009-06-01 21:41:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"action"=>"home", "controller"=>"viewer"}
+
+
+ActionController::UnknownAction (No action responded to home):
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:41:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.070000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;35;1mComment Columns (0.050000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mComment Load (0.020000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.04000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.02000)
+Completed in 0.54000 (1 reqs/sec) | Rendering: 0.25000 (46%) | DB: 0.15000 (27%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 21:42:56) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Papi ", "text"=>"Here we are ... Come to us ", "where_from"=>"Japan", "paper_id"=>"9", "email"=>"pai@yahoo.fr"}}
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.000000)[0m   [0mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Papi ', '2009-06-01 21:42:56', 'Here we are ... Come to us ', NULL, 'Japan', 9, NULL, '2009-06-01 21:42:56', 'pai@yahoo.fr')[0m
+  [4;36;1mSQL (0.060000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.15000 (6 reqs/sec) | DB: 0.08000 (53%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-01 21:42:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.020000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.25000 (4 reqs/sec) | Rendering: 0.14000 (56%) | DB: 0.05000 (19%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 21:43:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.000000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.010000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.76100 (1 reqs/sec) | Rendering: 0.58100 (76%) | DB: 0.06000 (7%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-01 22:19:52) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"c651b21155fa6309594419af1e16e16bc6648ebe", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"hi ", "text"=>"YEs", "where_from"=>"Italie", "paper_id"=>"9", "email"=>"masmavp@yahoo.fr"}}
+  [4;36;1mComment Columns (0.131000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.000000)[0m   [0;1mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('hi ', '2009-06-01 22:19:52', 'YEs', NULL, 'Italie', 9, NULL, '2009-06-01 22:19:52', 'masmavp@yahoo.fr')[0m
+  [4;35;1mSQL (0.070000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.27100 (3 reqs/sec) | DB: 0.20100 (74%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-01 22:19:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--2d685b61f3422695cae619cefde0a88122a2f44a
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.060000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.000000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.05000)
+Completed in 0.39100 (2 reqs/sec) | Rendering: 0.22000 (56%) | DB: 0.07000 (17%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:25:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.030000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.020000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+
+
+NoMethodError (undefined method `comment' for #<Paper:0x4823404>):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:206:in `method_missing'
+    /app/controllers/viewer_controller.rb:5:in `showE'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PapersController#show (for 127.0.0.1 at 2009-06-01 22:25:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"papers"}
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 9) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.23000 (4 reqs/sec) | Rendering: 0.14000 (60%) | DB: 0.06000 (26%) | 200 OK [http://localhost/papers/9]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-01 22:27:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.29000 (3 reqs/sec) | Rendering: 0.15000 (51%) | DB: 0.05000 (17%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:27:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.021000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+
+
+NoMethodError (undefined method `comment' for #<Paper:0x46bd13c>):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:206:in `method_missing'
+    /app/controllers/viewer_controller.rb:5:in `showE'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:28:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.000000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+
+
+NoMethodError (undefined method `comment' for #<Paper:0x481401c>):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:206:in `method_missing'
+    /app/controllers/viewer_controller.rb:5:in `showE'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-01 22:28:59) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.000000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.03000)
+Rendered shared/_side (0.03000)
+Completed in 0.28100 (3 reqs/sec) | Rendering: 0.18100 (64%) | DB: 0.06100 (21%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:29:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"10", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '10') LIMIT 1[0m
+
+
+NoMethodError (undefined method `comment' for #<Paper:0x48032bc>):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:206:in `method_missing'
+    /app/controllers/viewer_controller.rb:5:in `showE'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:30:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"10", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '10') LIMIT 1[0m
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.020000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;36;1mComment Load (0.040000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered comments/_comment (0.03000)
+Rendered comments/_comment (0.04000)
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #12 of comments/_comment.html.erb:
+9:     <p>
+10:       <b>Comment:</b>
+11:       <%=h comment.text %> </b>
+12:       <%=h comment.created_at.strftime('%b %d, %Y') %>
+13:     </p>
+14:     
+15: 
+
+    app/views/comments/_comment.html.erb:12:in `_run_erb_47app47views47comments47_comment46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:333:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:117:in `render_partial'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:116:in `render_partial'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:143:in `render_partial_collection'
+    c:/ruby/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:161:in `each_with_index'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `each_with_index'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_collection.rb:162:in `method_missing_without_paginate'
+    c:/ruby/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:141:in `render_partial_collection'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:354:in `render'
+    app/views/viewer/showE.html.erb:27:in `_run_erb_47app47views47viewer47showE46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:35:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"10", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Columns (0.040000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.050000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '10') LIMIT 1[0m
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;36;1mComment Load (0.010000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered comments/_comment (0.05000)
+Rendered comments/_comment (0.00000)
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #12 of comments/_comment.html.erb:
+9:     <p>
+10:       <b>Comment:</b>
+11:       <%=h comment.text %> </b>
+12:       <%=h comment.created_at.strftime('%b %d, %Y') %>
+13:     </p>
+14:     
+15: 
+
+    app/views/comments/_comment.html.erb:12:in `_run_erb_47app47views47comments47_comment46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:333:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:117:in `render_partial'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:116:in `render_partial'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:143:in `render_partial_collection'
+    c:/ruby/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:161:in `each_with_index'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `each_with_index'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_collection.rb:162:in `method_missing_without_paginate'
+    c:/ruby/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:141:in `render_partial_collection'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:354:in `render'
+    app/views/viewer/showE.html.erb:27:in `_run_erb_47app47views47viewer47showE46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-01 22:36:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;35;1mPaper Load (0.020000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.06000)
+Rendered shared/_side (0.11000)
+Completed in 0.64100 (1 reqs/sec) | Rendering: 0.54100 (84%) | DB: 0.05000 (7%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-01 22:36:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlNmNhYmYyMjMxNzZhNTQxMWY3YmNhOTJjZjMzNDcw%0AZWIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--72036b7af579abdfbd1900432481b71eb4ae5614
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.030000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.010000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.strftime) on line #12 of comments/_comment.html.erb:
+9:     <p>
+10:       <b>Comment:</b>
+11:       <%=h comment.text %> </b>
+12:       <%=h comment.created_at.strftime('%b %d, %Y') %>
+13:     </p>
+14:     
+15: 
+
+    app/views/comments/_comment.html.erb:12:in `_run_erb_47app47views47comments47_comment46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:333:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:117:in `render_partial'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:307:in `realtime'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:116:in `render_partial'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:143:in `render_partial_collection'
+    c:/ruby/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/attribute_methods.rb:161:in `each_with_index'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `each_with_index'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_proxy.rb:125:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/associations/association_collection.rb:162:in `method_missing_without_paginate'
+    c:/ruby/lib/ruby/gems/1.8/gems/mislav-will_paginate-2.3.8/lib/will_paginate/finder.rb:168:in `method_missing'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/partials.rb:141:in `render_partial_collection'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:354:in `render'
+    app/views/viewer/showE.html.erb:27:in `_run_erb_47app47views47viewer47showE46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-02 13:28:55) [GET]
+  Session ID: 645670621c257a9c31f3c38ea1e7c2df
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.120000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.320000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.090000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.080000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.030000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.15000)
+Rendered shared/_side (0.27100)
+Completed in 2.46400 (0 reqs/sec) | Rendering: 1.31200 (53%) | DB: 0.70000 (28%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-02 13:29:10) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.020000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.020000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.12000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 1.08200 (0 reqs/sec) | Rendering: 0.70200 (64%) | DB: 0.09000 (8%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-02 13:29:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzM0MTNhMDc5MThmNWEzMDRkOTQ3NWRlOTc3YWQz%0ANTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f67e4ea47f116b715f81c062f659b3a5891dd3e1
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.030000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.020000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.01000)
+Completed in 0.39100 (2 reqs/sec) | Rendering: 0.21000 (53%) | DB: 0.07000 (17%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-02 13:29:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzM0MTNhMDc5MThmNWEzMDRkOTQ3NWRlOTc3YWQz%0ANTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f67e4ea47f116b715f81c062f659b3a5891dd3e1
+  Parameters: {"action"=>"showE", "id"=>"10", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '10') LIMIT 1[0m
+  [4;35;1mComment Columns (0.011000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;36;1mComment Load (0.030000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.07000)
+Completed in 1.03200 (0 reqs/sec) | Rendering: 0.78100 (75%) | DB: 0.06100 (5%) | 200 OK [http://localhost/viewer/showE/10]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-06-02 13:29:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzM0MTNhMDc5MThmNWEzMDRkOTQ3NWRlOTc3YWQz%0ANTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f67e4ea47f116b715f81c062f659b3a5891dd3e1
+  Parameters: {"action"=>"showE", "id"=>"10", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '10') LIMIT 1[0m
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+  [4;36;1mComment Load (0.020000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.49000 (2 reqs/sec) | Rendering: 0.26000 (53%) | DB: 0.06000 (12%) | 200 OK [http://localhost/viewer/showE/10]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-06-02 13:30:02) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzM0MTNhMDc5MThmNWEzMDRkOTQ3NWRlOTc3YWQz%0ANTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--f67e4ea47f116b715f81c062f659b3a5891dd3e1
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"39e08888d99fffd3c02b6115f7a6a357f75845c4", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Mazembo", "text"=>"Hi", "where_from"=>"KZN", "paper_id"=>"10", "email"=>"mazemb_eddy@yahoo.fr"}}
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.050000)[0m   [0mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Mazembo', '2009-06-02 13:30:03', 'Hi', NULL, 'KZN', 10, NULL, '2009-06-02 13:30:03', 'mazemb_eddy@yahoo.fr')[0m
+  [4;36;1mSQL (0.030000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.18000 (5 reqs/sec) | DB: 0.10000 (55%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-02 13:30:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYzM0MTNhMDc5MThmNWEzMDRkOTQ3NWRlOTc3YWQz%0ANTYiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--150740ac84fc4cf2674cbeed5e4addb96b20c8f1
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.030000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.05000)
+Rendered shared/_side (0.05000)
+Completed in 0.95100 (1 reqs/sec) | Rendering: 0.76100 (80%) | DB: 0.09000 (9%) | 200 OK [http://localhost/]
