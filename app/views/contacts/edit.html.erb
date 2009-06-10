@@ -1,0 +1,32 @@
+<h1>Editing contacts</h1>
+
+<%= error_messages_for :contacts %>
+
+<% form_for(@contacts) do |f| %>
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :Name %>
+  </p>
+
+  <p>
+    <b>Email</b><br />
+    <%= f.text_field :Email %>
+  </p>
+
+  <p>
+    <b>Where from</b><br />
+    <%= f.text_field :Where_From %>
+  </p>
+
+  <p>
+    <b>Message</b><br />
+    <%= f.text_area :Message %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @contacts %> |
+<%= link_to 'Back', contacts_path %>

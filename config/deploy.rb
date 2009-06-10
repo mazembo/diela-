@@ -1,26 +1,52 @@
-set :application, "focas"
-set :deploy_to, "/var/www/apps/#{application}"
+set :ip, "74.63.10.91"
+set :user, "root"
+set :server_name, "74.63.10.91"
 
-role :app, "74.63.10.91"
-role :web, "74.63.10.91"
-role :db,  "74.63.10.91", :primary => true
+set :application, "dielais.com"
+set :scm, :git
+
+set :repository, "git://github.com/mazembo/dielais.git"
+
+set :deploy_to, "/home/admin/#{application}"
+
+set :use_sudo, false
+set :group_writable, false
+
+
+set :branch, 'master'
+
+set :deploy_via, :checkout
 
 default_run_options[:pty] = true
-set :repository,  "git@github.com:mazembo/diela-.git"
-set :scm, "git"
-set :branch, "master"
-set :deploy_via, :remote_cache
 
-set :user, "root"
-set :admin_runner, "root"
+set :rails_env, "production"
+
+role :app, server_name
+role :web, server_name
+role :db, server_name, :primary => true
+
+task :after_update_code, :roles => [:web, :db, :app] do
+run "chmod 755 #{release_path}/public"
+run "cd #{deploy_to} && chown admin:apache ./ -R"
 
 namespace :deploy do
-  desc "Restart Application"
-  task :restart, :roles => :app do
-    run "touch #{current_path}/tmp/restart.txt"
-  end
-  desc "Start Application -- not needed for Passenger"
-  task :start, :roles => :app do
-    # nothing -- need to override default cap start task when using Passenger
-  end
+desc "cold deploy"
+task :cold do
+update
+passenger::restart
+end
+
+desc "restart passenger"
+task :restart do
+passenger::restart
+end
+end
+
+namespace :passenger do
+desc "Restart Application"
+task :restart do
+run "touch #{current_path}/tmp/restart.txt"
+end
+
+end
 end

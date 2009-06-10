@@ -43918,3 +43918,192 @@ Rendering viewer/index
 Rendered shared/_navigation (0.05000)
 Rendered shared/_side (0.05000)
 Completed in 0.95100 (1 reqs/sec) | Rendering: 0.76100 (80%) | DB: 0.09000 (9%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-10 21:49:34) [GET]
+  Session ID: f51462fc549e45e232d0dfcd91cc5aa2
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.040000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.220000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.080000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.030000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.090000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.08100)
+Rendered shared/_side (0.14100)
+Completed in 1.31200 (0 reqs/sec) | Rendering: 0.68200 (51%) | DB: 0.46000 (35%) | 200 OK [http://localhost/]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;35;1mSQL (0.060000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateContacts (22)
+  [4;35;1mSQL (0.822000)[0m   [0mCREATE TABLE `contacts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `Name` varchar(255) DEFAULT NULL, `Email` varchar(255) DEFAULT NULL, `Where_From` varchar(255) DEFAULT NULL, `Message` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.030000)[0m   [0;1mUPDATE schema_info SET version = 22[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.020000)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.090000)[0m   [0mSHOW FIELDS FROM `authors`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mdescribe `authors`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `authors`[0m
+  [4;36;1mSQL (0.071000)[0m   [0;1mSHOW FIELDS FROM `authors_papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mdescribe `authors_papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW KEYS FROM `authors_papers`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mdescribe `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSHOW KEYS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mdescribe `contacts`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW KEYS FROM `contacts`[0m
+  [4;35;1mSQL (0.090000)[0m   [0mSHOW FIELDS FROM `pages`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mdescribe `pages`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSHOW KEYS FROM `pages`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.040000)[0m   [0mdescribe `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSHOW KEYS FROM `papers`[0m
+  [4;35;1mSQL (0.060000)[0m   [0mSHOW FIELDS FROM `sheets`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mdescribe `sheets`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSHOW KEYS FROM `sheets`[0m
+  [4;36;1mSQL (0.080000)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSHOW KEYS FROM `users`[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-10 22:24:20) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.040000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.030000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.03000)
+Rendered shared/_side (0.15000)
+Completed in 1.11100 (0 reqs/sec) | Rendering: 0.76100 (68%) | DB: 0.18000 (16%) | 200 OK [http://localhost/]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2009-06-10 22:24:42) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContacts Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.05000)
+Completed in 0.70100 (1 reqs/sec) | Rendering: 0.46100 (65%) | DB: 0.06000 (8%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2009-06-10 22:26:22) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--4a7030eac7dccb0f4838ca9eb721446d3f80153b
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7a84d1c91834b046855a477c8c8826f6f4c213a8", "action"=>"create", "controller"=>"contacts", "contacts"=>{"Name"=>"Mazembo", "Message"=>"Congrat", "Email"=>"mazemb_eddy@yahoo.fr", "Where_From"=>"Kinshasa"}}
+  [4;35;1mContacts Columns (0.040000)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mContacts Create (0.000000)[0m   [0mINSERT INTO `contacts` (`Message`, `Name`, `updated_at`, `Email`, `Where_From`, `created_at`) VALUES('Congrat', 'Mazembo', '2009-06-10 22:26:23', 'mazemb_eddy@yahoo.fr', 'Kinshasa', '2009-06-10 22:26:23')[0m
+  [4;36;1mSQL (0.050000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.31000 (3 reqs/sec) | DB: 0.09000 (29%) | 302 Found [http://localhost/contacts]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-10 22:26:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIidDb250YWN0cyB3YXMgc3VjY2Vzc2Z1bGx5IGNyZWF0%0AZWQuBjoKQHVzZWR7BjsHVA%3D%3D--83ebc8b913f120ae6444c3c27dc864a703cfbcc9
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.050000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.040000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.03000)
+Completed in 0.68100 (1 reqs/sec) | Rendering: 0.41100 (60%) | DB: 0.15000 (22%) | 200 OK [http://localhost/]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2009-06-10 22:28:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--4a7030eac7dccb0f4838ca9eb721446d3f80153b
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContacts Columns (0.150000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.03000)
+Completed in 2.04300 (0 reqs/sec) | Rendering: 1.29200 (63%) | DB: 0.15000 (7%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#create (for 127.0.0.1 at 2009-06-10 22:28:54) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--4a7030eac7dccb0f4838ca9eb721446d3f80153b
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7a84d1c91834b046855a477c8c8826f6f4c213a8", "action"=>"create", "controller"=>"contacts", "contacts"=>{"Name"=>"Phebe ", "Message"=>"Hi I like it ", "Email"=>"phemac2002@yahoo.fr", "Where_From"=>"Kinshasa"}}
+  [4;35;1mContacts Columns (0.030000)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mContacts Create (0.000000)[0m   [0mINSERT INTO `contacts` (`Message`, `Name`, `updated_at`, `Email`, `Where_From`, `created_at`) VALUES('Hi I like it ', 'Phebe ', '2009-06-10 22:28:54', 'phemac2002@yahoo.fr', 'Kinshasa', '2009-06-10 22:28:54')[0m
+  [4;36;1mSQL (0.080000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.33100 (3 reqs/sec) | DB: 0.11000 (33%) | 302 Found [http://localhost/contacts]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-10 22:28:55) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIk5UaGFua3MgZm9yIHdyaXRpbmcgdG8gdXMuIFdlIHdp%0AbGwgcmVzcG9uZCB0byB5b3UgZGlsaWdlbnRseSBpZiBuZWNlc3NhcnkuBjoK%0AQHVzZWR7BjsHVA%3D%3D--e93792b7a982b1c4721eaf390655bb7efbb74e7e
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.020000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.050000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.140000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.03000)
+Rendered shared/_side (0.03000)
+Completed in 0.87100 (1 reqs/sec) | Rendering: 0.49100 (56%) | DB: 0.21000 (24%) | 200 OK [http://localhost/]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2009-06-10 22:30:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--4a7030eac7dccb0f4838ca9eb721446d3f80153b
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContacts Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.04000)
+Completed in 1.14200 (0 reqs/sec) | Rendering: 0.82100 (71%) | DB: 0.03000 (2%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-10 22:32:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTJkNGRjMTFjNjhlOWMyOWQ3NWJkNDE3N2U1ZTBj%0AYTEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--4a7030eac7dccb0f4838ca9eb721446d3f80153b
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.02000)
+Completed in 0.49100 (2 reqs/sec) | Rendering: 0.30100 (61%) | DB: 0.05000 (10%) | 200 OK [http://localhost/]

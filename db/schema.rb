@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 21) do
+ActiveRecord::Schema.define(:version => 22) do
 
   create_table "authors", :force => true do |t|
     t.string   "author_name"
@@ -36,6 +36,15 @@ ActiveRecord::Schema.define(:version => 21) do
     t.string   "user_ip"
     t.string   "user_agent"
     t.string   "where_from"
+  end
+
+  create_table "contacts", :force => true do |t|
+    t.string   "Name"
+    t.string   "Email"
+    t.string   "Where_From"
+    t.text     "Message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "pages", :force => true do |t|

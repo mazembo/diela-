@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @contacts.Name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @contacts.Email %>
+</p>
+
+<p>
+  <b>Where from:</b>
+  <%=h @contacts.Where_From %>
+</p>
+
+<p>
+  <b>Message:</b>
+  <%=h @contacts.Message %>
+</p>
+
+
+<%= link_to 'Edit', edit_contacts_path(@contacts) %> |
+<%= link_to 'Back', contacts_path %>

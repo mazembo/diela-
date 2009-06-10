@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :contacts
+
   
   map.root :controller => 'viewer', :action => 'index'
   

@@ -25,7 +25,7 @@
 			<li><%= link_to 'Staff', {:controller =>'viewer', :action =>'show', :name => 'staff'} %></li>
 			<li><%= link_to 'Opportunities', {:controller =>'viewer', :action =>'show', :name => 'opportunities'} %></li>
 			<li><%= link_to 'Member organisations', {:controller =>'viewer', :action =>'show', :name => 'member organisations'} %></li>
-			<li><%= link_to 'Contact Us', {:controller =>'viewer', :action =>'show', :name => 'contact us'} %></li>
+			<li><%= link_to 'Contact Us', {:controller =>'Contacts', :action =>'new'} %></li>
 					<li><% if logged_in? %>
 								<%= link_to "Log Out", logout_path %>
 							<% else %>
