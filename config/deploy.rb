@@ -2,7 +2,7 @@ set :ip, "74.63.10.91"
 set :user, "root"
 set :server_name, "74.63.10.91"
 
-set :application, "dielais.com"
+set :application, "focascongo"
 set :scm, :git
 
 set :repository, "git://github.com/mazembo/dielais.git"

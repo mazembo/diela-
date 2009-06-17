@@ -35,7 +35,8 @@ test:
 
 production:
   adapter: mysql
-  database: focas
-  username: root
+  database: focascongo
+  username: focascongo
   password: nditukulu
   host: localhost
+
