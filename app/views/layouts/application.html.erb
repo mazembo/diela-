@@ -5,14 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title><%= @pagetitle || (@page && @page.title)|| "Forum of Congolese Organisations in South Africa" %></title>
 		<%= stylesheet_link_tag 'learningrails', 'application' %>
-		<%= javascript_include_tag :defaults %>
+	
   </head>
   <body>
 		<div id='pagewrapper'>
 			<div id='header'>
 				
 				
-				<p>Forum des Organisations Congolaises en Afrique du Sud - FOCAS </p>
+				<p>CENTRE FOR CONGO STUDIES -CCS</p>
 		           
 				</tr>
 			 </div>
@@ -46,14 +46,14 @@
 		
 		
 	 <div id="side">
-		<%= yield(:side) || render(:partial => 'shared/side') %>
+		<%= render(:partial => 'shared/side') %>
 	  </div>
 	  <div class="clear"></div>
 	</div>
 	</div>
 	
 		<div id='footer'>
-			<p>Forum des Organisations Congolaises en Afrique du Sud -FOCAS </p>
+			<p>Centre for Congo Studies -CCS </p>
 		</div>
   </body>
 </html>

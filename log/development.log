@@ -44115,3 +44115,953 @@ WARNING: You're using the Ruby-based MySQL library that ships with Rails. This l
   [4;36;1mSQL (0.070000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
   [4;35;1mPaper Load (0.150000)[0m   [0mSELECT * FROM `papers` [0m
   [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:15:19) [GET]
+  Session ID: ed5683fcfb05bf59c245726bed7673d7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (1.777000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (3.795000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.863000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.241000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.492000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.11000)
+Rendered shared/_side (0.53200)
+Completed in 8.16200 (0 reqs/sec) | Rendering: 2.29900 (28%) | DB: 7.16800 (87%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:22:07) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.020000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.030000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.03000)
+Completed in 0.54200 (1 reqs/sec) | Rendering: 0.30100 (55%) | DB: 0.07000 (12%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:23:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.060000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.021000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.02000)
+Completed in 0.55200 (1 reqs/sec) | Rendering: 0.32100 (58%) | DB: 0.15100 (27%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:23:38) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;36;1mPaper Load (0.050000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.021000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.05000)
+Completed in 1.07400 (0 reqs/sec) | Rendering: 0.71200 (66%) | DB: 0.10100 (9%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:30:36) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;35;1mPaper Load (0.040000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.46200 (2 reqs/sec) | Rendering: 0.24100 (52%) | DB: 0.09000 (19%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:31:17) [GET]
+  Session ID: 38e993cda408ad6aa54d4ddae43d8d79
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.030000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.030000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.040000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.03000)
+Completed in 0.52200 (1 reqs/sec) | Rendering: 0.30100 (57%) | DB: 0.12000 (22%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:34:13) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;35;1mPaper Load (0.070000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.011000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.070000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.99400 (1 reqs/sec) | Rendering: 0.19100 (19%) | DB: 0.18100 (18%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:34:27) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.03000)
+Completed in 0.49200 (2 reqs/sec) | Rendering: 0.33100 (67%) | DB: 0.05000 (10%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:39:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;35;1mPaper Load (0.031000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.040000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 1.40600 (0 reqs/sec) | Rendering: 1.03400 (73%) | DB: 0.08100 (5%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:41:41) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.030000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.46200 (2 reqs/sec) | Rendering: 0.28100 (60%) | DB: 0.08000 (17%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:43:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.061000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.050000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.03000)
+Completed in 2.71000 (0 reqs/sec) | Rendering: 2.03800 (75%) | DB: 0.15100 (5%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:46:06) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.02000)
+Completed in 0.38200 (2 reqs/sec) | Rendering: 0.25100 (65%) | DB: 0.03000 (7%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:46:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.03000)
+Rendered shared/_side (0.06100)
+Completed in 0.78300 (1 reqs/sec) | Rendering: 0.62300 (79%) | DB: 0.08000 (10%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:47:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.021000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.02000)
+Completed in 0.35200 (2 reqs/sec) | Rendering: 0.21000 (59%) | DB: 0.06100 (17%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:47:55) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.02000)
+Completed in 0.33100 (3 reqs/sec) | Rendering: 0.20100 (60%) | DB: 0.05000 (15%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:48:14) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.030000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.02000)
+Completed in 0.37100 (2 reqs/sec) | Rendering: 0.19000 (51%) | DB: 0.07000 (18%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:50:39) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.021000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.03000)
+Completed in 0.39200 (2 reqs/sec) | Rendering: 0.21100 (53%) | DB: 0.10100 (25%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:52:37) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.021000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.03000)
+Completed in 0.88300 (1 reqs/sec) | Rendering: 0.22000 (24%) | DB: 0.05100 (5%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:53:58) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.011000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.32100 (3 reqs/sec) | Rendering: 0.19000 (59%) | DB: 0.04100 (12%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:55:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.020000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 1.33500 (0 reqs/sec) | Rendering: 1.16500 (87%) | DB: 0.08000 (5%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:56:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.37100 (2 reqs/sec) | Rendering: 0.23100 (62%) | DB: 0.05000 (13%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-06-22 17:57:05) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.020000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.020000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.45200)
+Completed in 1.98800 (0 reqs/sec) | Rendering: 1.78700 (89%) | DB: 0.07000 (3%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-09-07 03:15:00) [GET]
+  Session ID: f612704960e438d56d0d138ba489f6c5
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.070000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.040000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.03000)
+Rendered shared/_side (0.07100)
+Completed in 0.73100 (1 reqs/sec) | Rendering: 0.45100 (61%) | DB: 0.20000 (27%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-09-07 03:15:47) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.020000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.011000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.06000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 1.05200 (0 reqs/sec) | Rendering: 0.84100 (79%) | DB: 0.08100 (7%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-09-07 03:16:35) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--7959d3c28f05ea45553ef5df7bc45b34989cadb4
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"d4c9a12ac23a4074180086c5af32de3710983d00", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"eddt", "text"=>"je suis content de votre action ", "where_from"=>"kin", "paper_id"=>"9", "email"=>"mazemb_eddy@yahoo.fr"}}
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mBEGIN[0m
+  [4;36;1mComment Create (0.030000)[0m   [0;1mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('eddt', '2009-09-07 03:16:35', 'je suis content de votre action ', NULL, 'kin', 9, NULL, '2009-09-07 03:16:35', 'mazemb_eddy@yahoo.fr')[0m
+  [4;35;1mSQL (0.030000)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.19000 (5 reqs/sec) | DB: 0.08000 (42%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-09-07 03:16:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--9c3bc29ba10977591f2cf5e62147eb62bc363aef
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.030000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.030000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.030000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.02000)
+Rendered shared/_side (0.03000)
+Completed in 1.12100 (0 reqs/sec) | Rendering: 0.88100 (78%) | DB: 0.09000 (8%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2009-09-07 03:17:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--7959d3c28f05ea45553ef5df7bc45b34989cadb4
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;35;1mComment Columns (0.030000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mComment Load (0.000000)[0m   [0;1mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.02000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.52000 (1 reqs/sec) | Rendering: 0.31000 (59%) | DB: 0.05000 (9%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing CommentsController#create (for 127.0.0.1 at 2009-09-07 03:17:46) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--7959d3c28f05ea45553ef5df7bc45b34989cadb4
+  Parameters: {"commit"=>"Submit", "authenticity_token"=>"d4c9a12ac23a4074180086c5af32de3710983d00", "action"=>"create", "controller"=>"comments", "comment"=>{"name"=>"Emmanuel mbongo ", "text"=>"allex de l' avant ", "where_from"=>"tshela", "paper_id"=>"9", "email"=>"mazemb_eddy@yahoo.fr"}}
+  [4;35;1mComment Columns (0.010000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mBEGIN[0m
+  [4;35;1mComment Create (0.020000)[0m   [0mINSERT INTO `comments` (`name`, `updated_at`, `text`, `user_agent`, `where_from`, `paper_id`, `user_ip`, `created_at`, `email`) VALUES('Emmanuel mbongo ', '2009-09-07 03:17:46', 'allex de l\' avant ', NULL, 'tshela', 9, NULL, '2009-09-07 03:17:46', 'mazemb_eddy@yahoo.fr')[0m
+  [4;36;1mSQL (0.040000)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 0.16000 (6 reqs/sec) | DB: 0.07000 (43%) | 302 Found [http://localhost/comments]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-09-07 03:17:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIipUaGFuayB5b3UgZm9yIGNvbW1lbnRpbmcgdGhpcyBh%0AcnRpY2xlBjoKQHVzZWR7BjsHVA%3D%3D--9c3bc29ba10977591f2cf5e62147eb62bc363aef
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.020000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.99200 (1 reqs/sec) | Rendering: 0.72200 (72%) | DB: 0.04000 (4%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-09-07 03:18:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--7959d3c28f05ea45553ef5df7bc45b34989cadb4
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"2"}
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.010000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.020000)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.010000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 10) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.01000)
+Completed in 0.45100 (2 reqs/sec) | Rendering: 0.21100 (46%) | DB: 0.04000 (8%) | 200 OK [http://localhost/?page=2]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2009-09-07 03:18:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGYwN2RjOGI0M2YyNThhMWUzZjNmNTdmOGY2YjE1%0ANmUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--7959d3c28f05ea45553ef5df7bc45b34989cadb4
+  Parameters: {"action"=>"index", "controller"=>"viewer", "page"=>"1"}
+  [4;35;1mPaper Load (0.000000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.020000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.01000)
+Completed in 1.13100 (0 reqs/sec) | Rendering: 0.96100 (84%) | DB: 0.03000 (2%) | 200 OK [http://localhost/?page=1]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-02-06 13:32:58) [GET]
+  Session ID: 6193bbe8517b303941c24125f2032fff
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.050000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.140000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.060000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.03000)
+Rendered shared/_side (0.08000)
+Completed in 0.72100 (1 reqs/sec) | Rendering: 0.41100 (57%) | DB: 0.27000 (37%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-02-11 21:34:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.050000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.040000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.050000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.04000)
+Rendered shared/_side (0.09000)
+Completed in 0.67100 (1 reqs/sec) | Rendering: 0.46100 (68%) | DB: 0.16000 (23%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-02-15 17:22:28) [GET]
+  Session ID: 1077c58faf4d0d01cd508df632b4f749
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.070000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.181000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.020000)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.070000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.010000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered shared/_navigation (0.05000)
+Rendered shared/_side (0.12000)
+Completed in 0.96200 (1 reqs/sec) | Rendering: 0.60100 (62%) | DB: 0.36100 (37%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2010-02-15 17:22:45) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"showE", "id"=>"9", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.021000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '9') LIMIT 1[0m
+  [4;36;1mComment Columns (0.030000)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (comments.paper_id = 9) [0m
+  [4;35;1mComment Load (0.010000)[0m   [0mSELECT * FROM `comments` WHERE (comments.paper_id = 9) [0m
+Rendered comments/_comment (0.03000)
+Rendered comments/_comment (0.01000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered comments/_comment (0.00000)
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.01000)
+Completed in 0.44100 (2 reqs/sec) | Rendering: 0.28000 (63%) | DB: 0.07100 (16%) | 200 OK [http://localhost/viewer/showE/9]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-02-15 17:23:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYjFkMmVkNGU0MzZlNmE4MjM4OWI1YjJlOWVkZTY2%0AMzUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--d990b935e35d1e5e25f35643fde968457fbd8a90
+  Parameters: {"name"=>"about us", "action"=>"show", "controller"=>"viewer"}
+  [4;36;1mPaper Columns (0.010000)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.010000)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`name` = 'about us') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of viewer/show.html.erb:
+1: 
+2: <h1><%=h @paper.title %><h1>
+3: <%= @paper.picture1 %> <br />
+4: <%= @paper.body %>
+5: 
+
+    app/views/viewer/show.html.erb:2:in `_run_erb_47app47views47viewer47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.842000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.721000)[0m   [0mDROP TABLE `authors`[0m
+  [4;36;1mSQL (0.410000)[0m   [0;1mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `author_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `organisation` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.190000)[0m   [0mDROP TABLE `authors_papers`[0m
+  [4;36;1mSQL (0.101000)[0m   [0;1mCREATE TABLE `authors_papers` (`author_id` int(11) DEFAULT NULL, `paper_id` int(11) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.130000)[0m   [0mDROP TABLE `comments`[0m
+  [4;36;1mSQL (0.120000)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `paper_id` int(11) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `text` text DEFAULT NULL, `user_ip` varchar(255) DEFAULT NULL, `user_agent` varchar(255) DEFAULT NULL, `where_from` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.250000)[0m   [0mDROP TABLE `contacts`[0m
+  [4;36;1mSQL (0.131000)[0m   [0;1mCREATE TABLE `contacts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `Name` varchar(255) DEFAULT NULL, `Email` varchar(255) DEFAULT NULL, `Where_From` varchar(255) DEFAULT NULL, `Message` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.090000)[0m   [0mDROP TABLE `pages`[0m
+  [4;36;1mSQL (0.110000)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `admin` tinyint(1) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.100000)[0m   [0mDROP TABLE `papers`[0m
+  [4;36;1mSQL (0.140000)[0m   [0;1mCREATE TABLE `papers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `admin` tinyint(1) DEFAULT NULL, `picture` varchar(255) DEFAULT NULL, `description` text DEFAULT NULL, `category` varchar(255) DEFAULT NULL, `author_name` varchar(255) DEFAULT NULL, `author_email` varchar(255) DEFAULT NULL, `author_organisation` varchar(255) DEFAULT NULL, `language` varchar(255) DEFAULT NULL, `position` int(11) DEFAULT 0, `published_date` datetime DEFAULT NULL, `picture2` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.301000)[0m   [0mDROP TABLE `sheets`[0m
+  [4;36;1mSQL (0.330000)[0m   [0;1mCREATE TABLE `sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.110000)[0m   [0mDROP TABLE `users`[0m
+  [4;36;1mSQL (0.210000)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `crypted_password` varchar(40) DEFAULT NULL, `salt` varchar(40) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `remember_token` varchar(255) DEFAULT NULL, `remember_token_expires_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.200000)[0m   [0;1mSHOW FIELDS FROM `schema_info`[0m
+  [4;35;1mSQL (0.050000)[0m   [0mUPDATE schema_info SET version = 22[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-03-01 19:57:59) [GET]
+  Session ID: 1603a04e922428d7a63e6d581d228310
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.070000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.330000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.10100)
+Rendered shared/_side (0.46100)
+Completed in 2.39400 (0 reqs/sec) | Rendering: 1.77300 (74%) | DB: 0.40000 (16%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-03-01 20:06:57) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.010000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.01000)
+Rendered shared/_side (0.01000)
+Completed in 0.29000 (3 reqs/sec) | Rendering: 0.23000 (79%) | DB: 0.01000 (3%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-15 21:21:37) [GET]
+  Session ID: e7446c88fe8281026940b0cb033d2b69
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-15 21:21:38) [GET]
+  Session ID: e7446c88fe8281026940b0cb033d2b69
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+
+
+Mysql::Error (Unknown database 'centre_congo_studies'):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/mysql_adapter.rb:472:in `real_connect'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/mysql_adapter.rb:472:in `connect'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mSQL (0.032000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mCREATE DATABASE `centre_congo_studies` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_general_ci`[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'authors': DROP TABLE `authors`[0m
+  [4;36;1mSQL (0.172000)[0m   [0;1mCREATE TABLE `authors` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `author_name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `organisation` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'authors_papers': DROP TABLE `authors_papers`[0m
+  [4;36;1mSQL (0.125000)[0m   [0;1mCREATE TABLE `authors_papers` (`author_id` int(11) DEFAULT NULL, `paper_id` int(11) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'comments': DROP TABLE `comments`[0m
+  [4;36;1mSQL (0.110000)[0m   [0;1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `paper_id` int(11) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `text` text DEFAULT NULL, `user_ip` varchar(255) DEFAULT NULL, `user_agent` varchar(255) DEFAULT NULL, `where_from` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'contacts': DROP TABLE `contacts`[0m
+  [4;36;1mSQL (0.094000)[0m   [0;1mCREATE TABLE `contacts` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `Name` varchar(255) DEFAULT NULL, `Email` varchar(255) DEFAULT NULL, `Where_From` varchar(255) DEFAULT NULL, `Message` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'pages': DROP TABLE `pages`[0m
+  [4;36;1mSQL (0.094000)[0m   [0;1mCREATE TABLE `pages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `admin` tinyint(1) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'papers': DROP TABLE `papers`[0m
+  [4;36;1mSQL (0.109000)[0m   [0;1mCREATE TABLE `papers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255) DEFAULT NULL, `title` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `admin` tinyint(1) DEFAULT NULL, `picture` varchar(255) DEFAULT NULL, `description` text DEFAULT NULL, `category` varchar(255) DEFAULT NULL, `author_name` varchar(255) DEFAULT NULL, `author_email` varchar(255) DEFAULT NULL, `author_organisation` varchar(255) DEFAULT NULL, `language` varchar(255) DEFAULT NULL, `position` int(11) DEFAULT 0, `published_date` datetime DEFAULT NULL, `picture2` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'sheets': DROP TABLE `sheets`[0m
+  [4;36;1mSQL (0.109000)[0m   [0;1mCREATE TABLE `sheets` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255) DEFAULT NULL, `description` varchar(255) DEFAULT NULL, `body` text DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: Unknown table 'users': DROP TABLE `users`[0m
+  [4;36;1mSQL (0.094000)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `login` varchar(255) DEFAULT NULL, `email` varchar(255) DEFAULT NULL, `crypted_password` varchar(40) DEFAULT NULL, `salt` varchar(40) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL, `remember_token` varchar(255) DEFAULT NULL, `remember_token_expires_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.094000)[0m   [0mCREATE TABLE `schema_info` (version int(11))[0m
+  [4;36;1mSQL (0.031000)[0m   [0;1mINSERT INTO `schema_info` (version) VALUES(0)[0m
+  [4;35;1mSQL (0.078000)[0m   [0mSHOW FIELDS FROM `schema_info`[0m
+  [4;36;1mSQL (0.032000)[0m   [0;1mUPDATE schema_info SET version = 22[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-15 21:23:51) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--cf715648a0b827fe1f3b1afb85ae9133abe6cac7
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.047000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.03100)
+Rendered shared/_side (0.04700)
+Completed in 0.36000 (2 reqs/sec) | Rendering: 0.25000 (69%) | DB: 0.04700 (13%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-15 21:59:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Load (0.031000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.01600)
+Rendered shared/_side (0.03100)
+Completed in 0.34400 (2 reqs/sec) | Rendering: 0.26600 (77%) | DB: 0.03100 (9%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-15 22:01:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.03100 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-15 22:01:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"index", "controller"=>"viewer"}
+  [4;35;1mPaper Load (0.000000)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.06200 (16 reqs/sec) | Rendering: 0.03100 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2010-09-15 22:04:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContacts Columns (0.094000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.01500)
+Rendered shared/_side (0.01500)
+Completed in 0.32800 (3 reqs/sec) | Rendering: 0.21800 (66%) | DB: 0.09400 (28%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-09-15 22:05:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"name"=>"member organisations", "action"=>"show", "controller"=>"viewer"}
+  [4;35;1mPaper Columns (0.015000)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.000000)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`name` = 'member organisations') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of viewer/show.html.erb:
+1: 
+2: <h1><%=h @paper.title %><h1>
+3: <%= @paper.picture1 %> <br />
+4: <%= @paper.body %>
+5: 
+
+    app/views/viewer/show.html.erb:2:in `_run_erb_47app47views47viewer47show46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:655:in `compile_and_render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:369:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_view/base.rb:318:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1101:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/layout.rb:261:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1154:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:1160:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:699:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:691:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:678:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.5/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/caching.rb:677:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:524:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/filters.rb:687:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/session_management.rb:123:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/base.rb:388:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:112:in `handle_dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:78:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/webrick_server.rb:62:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/servers/webrick.rb:66
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.5/lib/active_support/dependencies.rb:496:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.0.5/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.5/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2010-09-15 22:10:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;35;1mContacts Columns (0.000000)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.03100)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.06200 (79%) | DB: 0.00000 (0%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2010-09-15 22:11:27) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContacts Columns (0.000000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.01600)
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.06300 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2010-09-15 22:11:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;35;1mContacts Columns (0.000000)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.03100 (65%) | DB: 0.00000 (0%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2010-09-15 22:12:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;36;1mContacts Columns (0.016000)[0m   [0;1mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.06300 (15 reqs/sec) | Rendering: 0.03100 (49%) | DB: 0.01600 (25%) | 200 OK [http://localhost/contacts/new]
+
+
+Processing ContactsController#new (for 127.0.0.1 at 2010-09-15 22:18:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlMzU0NDI3MjE1YTU2MjdlOTQ3OWU4OWQ1OGQzYWYz%0AODEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6fd48f8356361d2dd973adc998004bb6af38b77a
+  Parameters: {"action"=>"new", "controller"=>"contacts"}
+  [4;35;1mContacts Columns (0.078000)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+Rendering template within layouts/application
+Rendering contacts/new
+Rendered shared/_navigation (0.00000)
+Rendered shared/_side (0.00000)
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03100 (24%) | DB: 0.07800 (62%) | 200 OK [http://localhost/contacts/new]
