@@ -45065,3 +45065,43 @@ Rendering contacts/new
 Rendered shared/_navigation (0.00000)
 Rendered shared/_side (0.00000)
 Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03100 (24%) | DB: 0.07800 (62%) | 200 OK [http://localhost/contacts/new]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-09-16 19:44:00) [GET]
+
+NameError (uninitialized constant ApplicationController):
+  app/controllers/viewer_controller.rb:1
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-09-16 19:47:32) [GET]
+  [4;35;1mPaper Load (172.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (31.0ms)
+Completed in 2250ms (View: 2062, DB: 172) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-16 19:47:44) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/login]
