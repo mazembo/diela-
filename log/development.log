@@ -45105,3 +45105,945 @@ Rendering sessions/new
 Rendered shared/_navigation (0.0ms)
 Rendered shared/_side (0.0ms)
 Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:26:36) [GET]
+  [4;35;1mPaper Load (453.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (16.0ms)
+Rendered shared/_side (47.0ms)
+Completed in 985ms (View: 500, DB: 469) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-10-19 18:26:46) [GET]
+  Parameters: {"name"=>"programmes"}
+  [4;35;1mPaper Columns (78.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (31.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`name` = 'programmes') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/viewer/show.html.erb:
+1: 
+2: <h1><%=h @paper.title %><h1>
+3: <%= @paper.picture1 %> <br />
+4: <%= @paper.body %>
+
+    app/views/viewer/show.html.erb:2
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-10-19 18:26:50) [GET]
+  Parameters: {"name"=>"about us"}
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`name` = 'about us') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/viewer/show.html.erb:
+1: 
+2: <h1><%=h @paper.title %><h1>
+3: <%= @paper.picture1 %> <br />
+4: <%= @paper.body %>
+
+    app/views/viewer/show.html.erb:2
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-10-19 18:26:53) [GET]
+  Parameters: {"name"=>"future activities"}
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`name` = 'future activities') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering viewer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/viewer/show.html.erb:
+1: 
+2: <h1><%=h @paper.title %><h1>
+3: <%= @paper.picture1 %> <br />
+4: <%= @paper.body %>
+
+    app/views/viewer/show.html.erb:2
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (235.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#new (for 127.0.0.1 at 2010-10-19 18:27:07) [GET]
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+Rendering template within layouts/application
+Rendering papers/new
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 46, DB: 0) | 200 OK [http://localhost/papers/new]
+  [4;35;1mSQL (31.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#create (for 127.0.0.1 at 2010-10-19 18:33:49) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2OsNW20CTb6045v9kj/LUtiARpCPDfH+hfBHPZcHGQg=", "paper"=>{"name"=>"Le rapport de l'ONU sur les abus des droits de l'homme a 'Est du Congo", "category"=>"articles ", "author_name"=>"Eddy Mazembo Mavungu ", "language"=>"french", "body"=>"Certain sectional strategic interests have underpinned the border conflict. On close examination, both the 2005 contested policy to exclude Merafong from Gauteng and the 2009 fast-tracked decision to reverse the earlier policy seem to be directly linked to strategic political interests of the ANC. In pushing for Merafong to be included in North West, government sought to compensate the province for the population lost incurred with as a result of moving the whole of the metropolitan municipality of Tswane in Gauteng. Critics have argued that this decision was dictated by a need for the ANC to secure black majority vote and unchallenged control of the metropolitan municipality. Black ANC electorate was strategically more important for the consolidation of ANC dominance in Tswane that inclusion of areas around … had to be compensated by exclusion of Merafong in order to preserve significant “equitable share” for the North West province. Hence there was a dimension of gerrymandering in the early decision to demarcate Merafong in North West. The reversal of this decision in 2009 was partly linked to the need to secure Khutsong’s pro-ANC votes at presidential elections.  This was a strategic imperative in a context of decreasing ANC membership in Gauteng due to the competition of the ANC breakaway party, Congress of the people and the controversy over the moral integrity of his presidential candidate, Jacob Zuma. Weeks before the finalisation of the decision by parliament, Gauteng premier and ANC chairperson Paul Mashatile, in a rally held in Khustong, appealed to “residents of the Merafong Municipality to reward the ANC with their votes for bringing them back into Gauteng” . No wonder why opposition parties have criticised the move as “political expediency” and “an opportunistic political move by the ruling ANC through government structures” . Many members of parliament have expressed the view that the process was rushed through. \r\n\r\nPersonal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, councillors, their property and municipal facilities became primary targets of public violence in Khutsong. Opposition parties’ members of North West provincial legislature opposed the release of the Merafong municipality to Gauteng in 2009. Some of them stood to be severed from their constituencies in Forshville and Wedela. They argued that, to correct Khutsong’s forced removal from Gauteng, government was again forcing Forshville and Wedela into Gauteng.   White communities and local politicians in the previously North West parts of Merafong (Wedela, Greenpark, Kokozi, Forshville) did not support the inclusion in Gauteng where they had little social and political connections. A NW MP even warned of future unrests in Kokosi, Wedela and Foshville as a result of their inclusion in Gauteng. ANC Gauteng legislature dismisses this opposition as driven by narrow interests and as lamentations of loosers: ", "title"=>"Le rapport de l'ONU sur les abus des droits de l'homme a 'Est du Congo", "author_organisation"=>"CCS ", "admin"=>"0", "description"=>"contrary of these constitutional goals: diminished civic dignity for the majority, rupture in the relationship between the community and the Legislature, a debacle. On close scrutiny, the two camps disagree on the implications of the conduct of the provincial legislature, but find such behaviour objectionable in a democratic society.", "author_email"=>"mazemb_eddy@yahoo.fr", "picture"=>"march1.jpg", "picture2"=>"march2.jpg"}}
+  [4;36;1mPaper Columns (156.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPaper Create (156.0ms)[0m   [0;1mINSERT INTO `papers` (`name`, `updated_at`, `category`, `title`, `body`, `author_name`, `language`, `author_organisation`, `admin`, `description`, `picture`, `author_email`, `position`, `published_date`, `picture2`, `created_at`) VALUES('Le rapport de l\'ONU sur les abus des droits de l\'homme a \'Est du Congo', '2010-10-19 18:33:49', 'articles ', 'Le rapport de l\'ONU sur les abus des droits de l\'homme a \'Est du Congo', 'Certain sectional strategic interests have underpinned the border conflict. On close examination, both the 2005 contested policy to exclude Merafong from Gauteng and the 2009 fast-tracked decision to reverse the earlier policy seem to be directly linked to strategic political interests of the ANC. In pushing for Merafong to be included in North West, government sought to compensate the province for the population lost incurred with as a result of moving the whole of the metropolitan municipality of Tswane in Gauteng. Critics have argued that this decision was dictated by a need for the ANC to secure black majority vote and unchallenged control of the metropolitan municipality. Black ANC electorate was strategically more important for the consolidation of ANC dominance in Tswane that inclusion of areas around … had to be compensated by exclusion of Merafong in order to preserve significant “equitable share” for the North West province. Hence there was a dimension of gerrymandering in the early decision to demarcate Merafong in North West. The reversal of this decision in 2009 was partly linked to the need to secure Khutsong’s pro-ANC votes at presidential elections. This was a strategic imperative in a context of decreasing ANC membership in Gauteng due to the competition of the ANC breakaway party, Congress of the people and the controversy over the moral integrity of his presidential candidate, Jacob Zuma. Weeks before the finalisation of the decision by parliament, Gauteng premier and ANC chairperson Paul Mashatile, in a rally held in Khustong, appealed to “residents of the Merafong Municipality to reward the ANC with their votes for bringing them back into Gauteng” . No wonder why opposition parties have criticised the move as “political expediency” and “an opportunistic political move by the ruling ANC through government structures” . Many members of parliament have expressed the view that the process was rushed through. \r\n\r\nPersonal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, councillors, their property and municipal facilities became primary targets of public violence in Khutsong. Opposition parties’ members of North West provincial legislature opposed the release of the Merafong municipality to Gauteng in 2009. Some of them stood to be severed from their constituencies in Forshville and Wedela. They argued that, to correct Khutsong’s forced removal from Gauteng, government was again forcing Forshville and Wedela into Gauteng. White communities and local politicians in the previously North West parts of Merafong (Wedela, Greenpark, Kokozi, Forshville) did not support the inclusion in Gauteng where they had little social and political connections. A NW MP even warned of future unrests in Kokosi, Wedela and Foshville as a result of their inclusion in Gauteng. ANC Gauteng legislature dismisses this opposition as driven by narrow interests and as lamentations of loosers: ', 'Eddy Mazembo Mavungu ', 'french', 'CCS ', 0, 'contrary of these constitutional goals: diminished civic dignity for the majority, rupture in the relationship between the community and the Legislature, a debacle. On close scrutiny, the two camps disagree on the implications of the conduct of the provincial legislature, but find such behaviour objectionable in a democratic society.', 'march1.jpg', 'mazemb_eddy@yahoo.fr', 0, NULL, 'march2.jpg', '2010-10-19 18:33:49')[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/papers/1
+Completed in 672ms (DB: 406) | 302 Found [http://localhost/papers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#show (for 127.0.0.1 at 2010-10-19 18:33:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (47.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 141ms (View: 78, DB: 63) | 200 OK [http://localhost/papers/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:34:23) [GET]
+  [4;36;1mPaper Load (16.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 32ms (View: 0, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:34:33) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:34:40) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:35:25) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#index (for 127.0.0.1 at 2010-10-19 18:35:30) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` [0m
+Rendering template within layouts/application
+Rendering papers/index
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/papers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:35:43) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+Rendering template within layouts/application
+Rendering viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#index (for 127.0.0.1 at 2010-10-19 18:45:54) [GET]
+  [4;35;1mPaper Load (109.0ms)[0m   [0mSELECT * FROM `papers` [0m
+Rendering template within layouts/application
+Rendering papers/index
+  [4;36;1mPaper Columns (78.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 235ms (View: 16, DB: 234) | 200 OK [http://localhost/papers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#edit (for 127.0.0.1 at 2010-10-19 18:46:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (31.0ms)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering papers/edit
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 110ms (View: 47, DB: 47) | 200 OK [http://localhost/papers/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#update (for 127.0.0.1 at 2010-10-19 18:46:29) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"2OsNW20CTb6045v9kj/LUtiARpCPDfH+hfBHPZcHGQg=", "id"=>"1", "paper"=>{"name"=>"Le rapport de l'ONU sur les abus des droits de l'homme a 'Est du Congo", "category"=>"article ", "author_name"=>"Eddy Mazembo Mavungu ", "language"=>"english", "body"=>"Certain sectional strategic interests have underpinned the border conflict. On close examination, both the 2005 contested policy to exclude Merafong from Gauteng and the 2009 fast-tracked decision to reverse the earlier policy seem to be directly linked to strategic political interests of the ANC. In pushing for Merafong to be included in North West, government sought to compensate the province for the population lost incurred with as a result of moving the whole of the metropolitan municipality of Tswane in Gauteng. Critics have argued that this decision was dictated by a need for the ANC to secure black majority vote and unchallenged control of the metropolitan municipality. Black ANC electorate was strategically more important for the consolidation of ANC dominance in Tswane that inclusion of areas around … had to be compensated by exclusion of Merafong in order to preserve significant “equitable share” for the North West province. Hence there was a dimension of gerrymandering in the early decision to demarcate Merafong in North West. The reversal of this decision in 2009 was partly linked to the need to secure Khutsong’s pro-ANC votes at presidential elections.  This was a strategic imperative in a context of decreasing ANC membership in Gauteng due to the competition of the ANC breakaway party, Congress of the people and the controversy over the moral integrity of his presidential candidate, Jacob Zuma. Weeks before the finalisation of the decision by parliament, Gauteng premier and ANC chairperson Paul Mashatile, in a rally held in Khustong, appealed to “residents of the Merafong Municipality to reward the ANC with their votes for bringing them back into Gauteng” . No wonder why opposition parties have criticised the move as “political expediency” and “an opportunistic political move by the ruling ANC through government structures” . Many members of parliament have expressed the view that the process was rushed through. \r\n\r\nPersonal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, councillors, their property and municipal facilities became primary targets of public violence in Khutsong. Opposition parties’ members of North West provincial legislature opposed the release of the Merafong municipality to Gauteng in 2009. Some of them stood to be severed from their constituencies in Forshville and Wedela. They argued that, to correct Khutsong’s forced removal from Gauteng, government was again forcing Forshville and Wedela into Gauteng.   White communities and local politicians in the previously North West parts of Merafong (Wedela, Greenpark, Kokozi, Forshville) did not support the inclusion in Gauteng where they had little social and political connections. A NW MP even warned of future unrests in Kokosi, Wedela and Foshville as a result of their inclusion in Gauteng. ANC Gauteng legislature dismisses this opposition as driven by narrow interests and as lamentations of loosers: ", "title"=>"Le rapport de l'ONU sur les abus des droits de l'homme a 'Est du Congo", "author_organisation"=>"CCS ", "admin"=>"0", "description"=>"contrary of these constitutional goals: diminished civic dignity for the majority, rupture in the relationship between the community and the Legislature, a debacle. On close scrutiny, the two camps disagree on the implications of the conduct of the provincial legislature, but find such behaviour objectionable in a democratic society.", "author_email"=>"mazemb_eddy@yahoo.fr", "picture"=>"march1.jpg", "picture2"=>"march2.jpg"}}
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (16.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPaper Update (188.0ms)[0m   [0;1mUPDATE `papers` SET `category` = 'article ', `language` = 'english', `updated_at` = '2010-10-19 18:46:29' WHERE `id` = 1[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/papers/1
+Completed in 328ms (DB: 298) | 302 Found [http://localhost/papers/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#show (for 127.0.0.1 at 2010-10-19 18:46:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 203ms (View: 15, DB: 16) | 200 OK [http://localhost/papers/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:46:34) [GET]
+  [4;36;1mPaper Load (31.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (328.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 500ms (View: 47, DB: 437) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-19 18:46:34) [GET]
+
+ActionController::RoutingError (No route matches "/march1.jpg" with {:method=>:get}):
+  C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#edit (for 127.0.0.1 at 2010-10-19 18:47:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering papers/edit
+Rendered shared/_navigation (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/papers/1/edit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#update (for 127.0.0.1 at 2010-10-19 18:47:33) [PUT]
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"2OsNW20CTb6045v9kj/LUtiARpCPDfH+hfBHPZcHGQg=", "id"=>"1", "paper"=>{"name"=>"Le rapport de l'ONU sur les abus des droits de l'homme a 'Est du Congo", "category"=>"article ", "author_name"=>"Eddy Mazembo Mavungu ", "language"=>"english", "body"=>"Certain sectional strategic interests have underpinned the border conflict. On close examination, both the 2005 contested policy to exclude Merafong from Gauteng and the 2009 fast-tracked decision to reverse the earlier policy seem to be directly linked to strategic political interests of the ANC. In pushing for Merafong to be included in North West, government sought to compensate the province for the population lost incurred with as a result of moving the whole of the metropolitan municipality of Tswane in Gauteng. Critics have argued that this decision was dictated by a need for the ANC to secure black majority vote and unchallenged control of the metropolitan municipality. Black ANC electorate was strategically more important for the consolidation of ANC dominance in Tswane that inclusion of areas around … had to be compensated by exclusion of Merafong in order to preserve significant “equitable share” for the North West province. Hence there was a dimension of gerrymandering in the early decision to demarcate Merafong in North West. The reversal of this decision in 2009 was partly linked to the need to secure Khutsong’s pro-ANC votes at presidential elections.  This was a strategic imperative in a context of decreasing ANC membership in Gauteng due to the competition of the ANC breakaway party, Congress of the people and the controversy over the moral integrity of his presidential candidate, Jacob Zuma. Weeks before the finalisation of the decision by parliament, Gauteng premier and ANC chairperson Paul Mashatile, in a rally held in Khustong, appealed to “residents of the Merafong Municipality to reward the ANC with their votes for bringing them back into Gauteng” . No wonder why opposition parties have criticised the move as “political expediency” and “an opportunistic political move by the ruling ANC through government structures” . Many members of parliament have expressed the view that the process was rushed through. \r\n\r\nPersonal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, councillors, their property and municipal facilities became primary targets of public violence in Khutsong. Opposition parties’ members of North West provincial legislature opposed the release of the Merafong municipality to Gauteng in 2009. Some of them stood to be severed from their constituencies in Forshville and Wedela. They argued that, to correct Khutsong’s forced removal from Gauteng, government was again forcing Forshville and Wedela into Gauteng.   White communities and local politicians in the previously North West parts of Merafong (Wedela, Greenpark, Kokozi, Forshville) did not support the inclusion in Gauteng where they had little social and political connections. A NW MP even warned of future unrests in Kokosi, Wedela and Foshville as a result of their inclusion in Gauteng. ANC Gauteng legislature dismisses this opposition as driven by narrow interests and as lamentations of loosers: ", "title"=>"Le rapport de l'ONU sur les abus des droits de l'homme a 'Est du Congo", "author_organisation"=>"CCS ", "admin"=>"0", "description"=>"contrary of these constitutional goals: diminished civic dignity for the majority, rupture in the relationship between the community and the Legislature, a debacle. On close scrutiny, the two camps disagree on the implications of the conduct of the provincial legislature, but find such behaviour objectionable in a democratic society.", "author_email"=>"mazemb_eddy@yahoo.fr", "picture"=>"/images/march1.jpg", "picture2"=>"/images/march2.jpg"}}
+  [4;36;1mPaper Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPaper Update (31.0ms)[0m   [0mUPDATE `papers` SET `picture` = '/images/march1.jpg', `picture2` = '/images/march2.jpg', `updated_at` = '2010-10-19 18:47:33' WHERE `id` = 1[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/papers/1
+Completed in 125ms (DB: 93) | 302 Found [http://localhost/papers/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#show (for 127.0.0.1 at 2010-10-19 18:47:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPaper Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 31, DB: 31) | 200 OK [http://localhost/papers/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:47:37) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2010-10-19 18:47:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPaper Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '1') LIMIT 1[0m
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering template within layouts/application
+Rendering viewer/showE
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 125ms (View: 62, DB: 47) | 200 OK [http://localhost/viewer/showE/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:48:48) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#new (for 127.0.0.1 at 2010-10-19 18:51:11) [GET]
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+Rendering template within layouts/application
+Rendering papers/new
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 32ms (View: 16, DB: 16) | 200 OK [http://localhost/papers/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#create (for 127.0.0.1 at 2010-10-19 18:53:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2OsNW20CTb6045v9kj/LUtiARpCPDfH+hfBHPZcHGQg=", "paper"=>{"name"=>"Tshisekedi se presentera comme candidat ", "category"=>"article", "author_name"=>"Phebe Mavungu ", "language"=>"english ", "body"=>"Personal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, councillors, their property and municipal facilities became primary targets of public violence in Khutsong. Opposition parties’ members of North West provincial legislature opposed the release of the Merafong municipality to Gauteng in 2009. Some of them stood to be severed from their constituencies in Forshville and Wedela. They argued that, to correct Khutsong’s forced removal from Gauteng, government was again forcing Forshville and Wedela into Gauteng.   White communities and local politicians in the previously North West parts of Merafong (Wedela, Greenpark, Kokozi, Forshville) did not support the inclusion in Gauteng where they had little social and political connections. A NW MP even warned of future unrests in Kokosi, Wedela and Foshville as a result of their inclusion in Gauteng. ANC Gauteng legislature dismisses this opposition as driven by narrow interests and as lamentations of loosers: \r\nFew individuals in these opposition political parties just protect the interests of their   narrow constituency... They want to preserve seats here or there, they look at their very narrow interests. No one tries to see what is in the interest of the majority of the people in that area. What is best for these people putting aside one's political interests? I know that Freedom Plus and other small parties can not be happy with this decision. Some will loose their seats in NW legislature, some will loose control over few wards as there might be even redemarcation of wards within the municipality. We will swallow them in some wards they used to control in the past. That is why they are not happy. But why can't they approach blacks and canvass for votes? Why do they maintain a racial constituency? We will swallow them.” \r\nAs is apparent in this statement, political parties and individuals sought to promote and secure their strategic interests. Even at such local level, ANC politicians have looked at demarcation policy and counter-policy as a means to contain and defeat opposition parties.  \r\n-\r\nLimits of judicial mechanisms \r\n\r\nFor Merafong residents, the most important lesson emerging from the court’s dismissal of their case was that the dispute needed political settlement. It took twelve months for the Court to deliver a highly controversial judgment . Constitutional Court judges fundamentally differed on key inquiries: Was the public participation process a genuine one or just a sham? Did the process end with the holding of the public hearing session or was the legislature bound to keep the community engaged until the final decision? Was the legislature bound to a decision that accords with the wishes of the people and with its promises at the public hearing and in the negotiating mandate? Was the legislature’s final decision to support the excision of Merafong from Gauteng rational or irrational in the light ", "title"=>"Tshisekedi se presentera comme candidat", "author_organisation"=>"ICJ", "admin"=>"0", "description"=>"Personal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, ", "author_email"=>"phemac2002@yahoo.fr", "picture"=>"/images/march1.jpg", "picture2"=>"/images/march2.jpg"}}
+  [4;36;1mPaper Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPaper Create (32.0ms)[0m   [0;1mINSERT INTO `papers` (`name`, `updated_at`, `category`, `title`, `body`, `author_name`, `language`, `author_organisation`, `admin`, `description`, `picture`, `author_email`, `position`, `published_date`, `picture2`, `created_at`) VALUES('Tshisekedi se presentera comme candidat ', '2010-10-19 18:53:36', 'article', 'Tshisekedi se presentera comme candidat', 'Personal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, councillors, their property and municipal facilities became primary targets of public violence in Khutsong. Opposition parties’ members of North West provincial legislature opposed the release of the Merafong municipality to Gauteng in 2009. Some of them stood to be severed from their constituencies in Forshville and Wedela. They argued that, to correct Khutsong’s forced removal from Gauteng, government was again forcing Forshville and Wedela into Gauteng. White communities and local politicians in the previously North West parts of Merafong (Wedela, Greenpark, Kokozi, Forshville) did not support the inclusion in Gauteng where they had little social and political connections. A NW MP even warned of future unrests in Kokosi, Wedela and Foshville as a result of their inclusion in Gauteng. ANC Gauteng legislature dismisses this opposition as driven by narrow interests and as lamentations of loosers: \r\nFew individuals in these opposition political parties just protect the interests of their narrow constituency... They want to preserve seats here or there, they look at their very narrow interests. No one tries to see what is in the interest of the majority of the people in that area. What is best for these people putting aside one\'s political interests? I know that Freedom Plus and other small parties can not be happy with this decision. Some will loose their seats in NW legislature, some will loose control over few wards as there might be even redemarcation of wards within the municipality. We will swallow them in some wards they used to control in the past. That is why they are not happy. But why can\'t they approach blacks and canvass for votes? Why do they maintain a racial constituency? We will swallow them.” \r\nAs is apparent in this statement, political parties and individuals sought to promote and secure their strategic interests. Even at such local level, ANC politicians have looked at demarcation policy and counter-policy as a means to contain and defeat opposition parties. \r\n-\r\nLimits of judicial mechanisms \r\n\r\nFor Merafong residents, the most important lesson emerging from the court’s dismissal of their case was that the dispute needed political settlement. It took twelve months for the Court to deliver a highly controversial judgment . Constitutional Court judges fundamentally differed on key inquiries: Was the public participation process a genuine one or just a sham? Did the process end with the holding of the public hearing session or was the legislature bound to keep the community engaged until the final decision? Was the legislature bound to a decision that accords with the wishes of the people and with its promises at the public hearing and in the negotiating mandate? Was the legislature’s final decision to support the excision of Merafong from Gauteng rational or irrational in the light ', 'Phebe Mavungu ', 'english ', 'ICJ', 0, 'Personal interests of certain provincial and local politicians stood to be served or damaged both by the 2005 policy and its reversal in 2009. Merafong councillors’ change of position from preference of Gauteng to support of North West was explained by residents as motivated by promises of promotions in the North West province. Regarded by the community as traitors, ', '/images/march1.jpg', 'phemac2002@yahoo.fr', 0, NULL, '/images/march2.jpg', '2010-10-19 18:53:36')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/papers/2
+Completed in 125ms (DB: 95) | 302 Found [http://localhost/papers]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#show (for 127.0.0.1 at 2010-10-19 18:53:36) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 2) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/papers/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:53:42) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:53:51) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:53:56) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 1, 1[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/?page=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:54:01) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:55:35) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (16.0ms)
+Rendered shared/_side (47.0ms)
+Completed in 203ms (View: 188, DB: 0) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:55:41) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 46ms (View: 16, DB: 15) | 200 OK [http://localhost/?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:55:47) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 1[0m
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Rendered shared/_navigation (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 18:56:35) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 5[0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (31.0ms)
+Completed in 156ms (View: 126, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#new (for 127.0.0.1 at 2010-10-19 18:57:26) [GET]
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+Rendering template within layouts/application
+Rendering papers/new
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 78ms (View: 62, DB: 0) | 200 OK [http://localhost/papers/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#create (for 127.0.0.1 at 2010-10-19 19:01:05) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"2OsNW20CTb6045v9kj/LUtiARpCPDfH+hfBHPZcHGQg=", "paper"=>{"name"=>"La fin du regne de Kabila a sonne ", "category"=>"article ", "author_name"=>"Jean Jacques ", "language"=>"english", "body"=>"On the other hand, dissenting residents insisted both on the sovereign will and developmental interests of the discrete community of Matatiele/Maluti as the key determinants of their provincial location. Such reliance on local sovereignty and social equity is at the core of the territorial regional planning approach. Residents would that their economic and developmental interests would be better served from a closer provincial headquarter. Their preferential provincial arrangement is the one that conforms with existing transport and economic functional linkages with KZN and its major towns. Inclusion in KZN is perceived to best serve local interests. For that reason, the demarcation in E.C is resisted as illegitimate even if it has been duly enacted and pursues other rational objectives. Furthermore, residents unambiguously manifest their adhesion to territorial regional planning when they reject that government disagrees with the majority preference. On correcting the defect for which part of the Constitution twelfth amendment act had been invalidated, government consulted more broadly, but reconfirmed the impugned policy against the wishes of overwhelming majority of residents. This departure from the view of the people to be affected by the decision has been regarded as unacceptable and prompted the third Constitutional court challenge on the Matatiele case. That representatives may override preferences of the people is rejected by border dissenters, especially in the South African political structure characterised by party political centralism. Such dissatisfaction with representative democracy is a clear call for a more direct form of decision making on issues as critical as one’s provincial location. Far from being a political accident, the Matatiele provincial boundary dispute stemmed from such conceptual clash between government’s functional regional planning approach and residents’ territorial regional planning thinking. This also reflects a conflict between practices of representative democracy and calls for direct democracy at least on provincial boundary demarcation. However, the conflict has also been fuelled by government’s democratic deficit. ", "title"=>"La fin du regne de Kabila a sonne ", "author_organisation"=>"Wits university ", "admin"=>"0", "description"=>"Finally, the chapter ends with certain recommendations in an effort to enlighten policy making in the area of boundary demarcation and boundary conflicts resolution. These recommendations may not be conceived as ready made policy directives which this study has not aimed at. However, they may constitute a basis for discussion in policy formulation forums.  ", "author_email"=>"jean@yahoo.fr", "picture"=>"/images/march1.jpg", "picture2"=>"/images/march2.jpg"}}
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPaper Create (0.0ms)[0m   [0mINSERT INTO `papers` (`name`, `updated_at`, `category`, `title`, `body`, `author_name`, `language`, `author_organisation`, `admin`, `description`, `picture`, `author_email`, `position`, `published_date`, `picture2`, `created_at`) VALUES('La fin du regne de Kabila a sonne ', '2010-10-19 19:01:05', 'article ', 'La fin du regne de Kabila a sonne ', 'On the other hand, dissenting residents insisted both on the sovereign will and developmental interests of the discrete community of Matatiele/Maluti as the key determinants of their provincial location. Such reliance on local sovereignty and social equity is at the core of the territorial regional planning approach. Residents would that their economic and developmental interests would be better served from a closer provincial headquarter. Their preferential provincial arrangement is the one that conforms with existing transport and economic functional linkages with KZN and its major towns. Inclusion in KZN is perceived to best serve local interests. For that reason, the demarcation in E.C is resisted as illegitimate even if it has been duly enacted and pursues other rational objectives. Furthermore, residents unambiguously manifest their adhesion to territorial regional planning when they reject that government disagrees with the majority preference. On correcting the defect for which part of the Constitution twelfth amendment act had been invalidated, government consulted more broadly, but reconfirmed the impugned policy against the wishes of overwhelming majority of residents. This departure from the view of the people to be affected by the decision has been regarded as unacceptable and prompted the third Constitutional court challenge on the Matatiele case. That representatives may override preferences of the people is rejected by border dissenters, especially in the South African political structure characterised by party political centralism. Such dissatisfaction with representative democracy is a clear call for a more direct form of decision making on issues as critical as one’s provincial location. Far from being a political accident, the Matatiele provincial boundary dispute stemmed from such conceptual clash between government’s functional regional planning approach and residents’ territorial regional planning thinking. This also reflects a conflict between practices of representative democracy and calls for direct democracy at least on provincial boundary demarcation. However, the conflict has also been fuelled by government’s democratic deficit. ', 'Jean Jacques ', 'english', 'Wits university ', 0, 'Finally, the chapter ends with certain recommendations in an effort to enlighten policy making in the area of boundary demarcation and boundary conflicts resolution. These recommendations may not be conceived as ready made policy directives which this study has not aimed at. However, they may constitute a basis for discussion in policy formulation forums. ', '/images/march1.jpg', 'jean@yahoo.fr', 0, NULL, '/images/march2.jpg', '2010-10-19 19:01:05')[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/papers/3
+Completed in 125ms (DB: 93) | 302 Found [http://localhost/papers]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PapersController#show (for 127.0.0.1 at 2010-10-19 19:01:05) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering papers/show
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/papers/3]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 19:01:08) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 5[0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 30, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-19 19:02:16) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/application
+Rendering viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (16.0ms)
+Rendered shared/_side (47.0ms)
+Completed in 188ms (View: 157, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (94.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:08:25) [GET]
+  [4;35;1mPaper Load (296.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (94.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (78.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (31.0ms)
+Rendered shared/_side (78.0ms)
+Completed in 937ms (View: 422, DB: 577) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:10:31) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (16.0ms)
+Completed in 78ms (View: 63, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:12:24) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 62ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:12:29) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (32.0ms)
+Completed in 375ms (View: 329, DB: 31) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#show (for 127.0.0.1 at 2010-10-20 23:13:31) [GET]
+  Parameters: {"name"=>"member organisations"}
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`name` = 'member organisations') LIMIT 1[0m
+Rendering viewer/show
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.title) on line #2 of app/views/viewer/show.html.erb:
+1: 
+2: <h1><%=h @paper.title %><h1>
+3: <%= @paper.picture1 %> <br />
+4: <%= @paper.body %>
+
+    app/views/viewer/show.html.erb:2
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (266.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:19) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:25) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:29) [GET]
+  [4;36;1mPaper Load (16.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:33) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:35) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:38) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:40) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 63ms (View: 32, DB: 15) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:14:44) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 172ms (View: 140, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:19:31) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:19:35) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:19:39) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-20 23:19:41) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Completed in 219ms (View: 203, DB: 0) | 200 OK [http://localhost/viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-20 23:20:22) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering viewer/index
+  [4;35;1mComment Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Completed in 47ms (View: 0, DB: 15) | 200 OK [http://localhost/viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#index (for 127.0.0.1 at 2010-10-20 23:22:20) [GET]
+  [4;35;1mPaper Load (31.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering viewer/index
+  [4;36;1mComment Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Completed in 110ms (View: 16, DB: 78) | 200 OK [http://localhost/viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:22:59) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 63ms (View: 32, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:23:07) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 188ms (View: 142, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:23:12) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-20 23:23:15) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-20 23:23:17) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-10-20 23:23:20) [GET]
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/login]

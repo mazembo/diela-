@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= @pagetitle || (@page && @page.title)|| "CENTRE FOR CONGO STUDIES" %></title>
+		<%= stylesheet_link_tag 'learningrails', 'application' %>
+
+  </head>
+  <body>
+		<div id='pagewrapper'>
+			<div id='header'>
+
+
+				<p>CENTRE FOR CONGO STUDIES -CCS</p>
+
+
+			 </div>
+			<div id='navbar'>
+				<ul>
+			<li><%= link_to 'News', {:controller =>'english_viewer', :action =>'index'} %></li>
+			<li><%= link_to 'Research papers', {:controller =>'english_viewer', :action =>'research_papers'} %></li>
+			<li><%= link_to 'Publications', {:controller =>'english_viewer', :action =>'publications'} %></li>
+                        <li><%= link_to 'E-Library', {:controller =>'english_viewer', :action =>'e_library'} %></li>
+			<li><%= link_to 'Events', {:controller =>'english_viewer', :action =>'events'} %></li>
+			<li><%= link_to 'Multimedia', {:controller =>'english_viewer', :action =>'multimedia'} %></li>
+			<li><%= link_to 'Topics', {:controller =>'english_viewer', :action =>'topics'} %></li>
+			<li><%= link_to 'Donations', {:controller =>'english_viewer', :action =>'donations'} %></li>
+                        <li><%= link_to 'Enewsletter', {:controller =>'english_viewer', :action =>'enewsletter'} %></li>
+			<li><%= link_to 'Contact Us', {:controller =>'Contacts', :action =>'new'} %></li>
+					<li><% if logged_in? %>
+								<%= link_to "Log Out", logout_path %>
+							<% else %>
+								<%= link_to "Log In", login_path %>
+							<% end %>
+					</li>
+                        <li><%= link_to 'French', {:controller =>'french_viewer', :action =>'index'} %></li>
+				</ul>
+		  <div>
+		</div>
+		<div id="container">
+		<div id="main">
+		<div id='content1'>
+			<h2><%= flash[:notice] %></h2>
+
+      <%= yield %>
+		</div>
+		</div>
+
+
+	 <div id="side">
+		<%= render(:partial => 'shared/side') %>
+	  </div>
+	  <div class="clear"></div>
+	</div>
+	</div>
+
+		<div id='footer'>
+			<p>Centre for Congo Studies -CCS </p>
+		</div>
+                </div>
+  </body>
+</html>

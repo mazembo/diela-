@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title><%= @pagetitle || (@page && @page.title)|| "CENTRE D'ETUDES SUR LE CONGO (RDC)" %></title>
+		<%= stylesheet_link_tag 'learningrails', 'application' %>
+
+  </head>
+  <body>
+		<div id='pagewrapper'>
+			<div id='header'>
+
+
+				<p>CENTRE D'ETUDES SUR LE CONGO (RDC)  -CCS</p>
+
+
+			 </div>
+			<div id='navbar'>
+				<ul>
+			<li><%= link_to 'Nouvelles', {:controller =>'french_viewer', :action =>'index'} %></li>
+			<li><%= link_to 'Articles', {:controller =>'french_viewer', :action =>'articles'} %></li>
+			<li><%= link_to 'Publications', {:controller =>'french_viewer', :action =>'publications'} %></li>
+			<li><%= link_to 'Bibliotheque', {:controller =>'french_viewer', :action =>'bibliotheque'} %></li>
+			<li><%= link_to 'Evenements', {:controller =>'french_viewer', :action =>'evenements'} %></li>
+			<li><%= link_to 'Multimedia', {:controller =>'french_viewer', :action =>'multimedia'} %></li>
+			<li><%= link_to 'Themes', {:controller =>'french_viewer', :action =>'themes'} %></li>
+                        <li><%= link_to 'Dons', {:controller =>'french_viewer', :action =>'dons'} %></li>
+                        <li><%= link_to 'Abonnement', {:controller =>'french_viewer', :action => 'abonnement'} %></li>
+			<li><%= link_to 'Contactez-nous', {:controller =>'Contacts', :action =>'new'} %></li>
+					<li><% if logged_in? %>
+								<%= link_to "deconnexion", logout_path %>
+							<% else %>
+								<%= link_to "se connecter", login_path %>
+							<% end %>
+					</li>
+                        <li><%= link_to 'English', {:controller =>'english_viewer', :action => 'index'} %></li>
+				</ul>
+		  <div>
+		</div>
+		<div id="container">
+		<div id="main">
+		<div id='content1'>
+			<h2><%= flash[:notice] %></h2>
+
+      <%= yield %>
+		</div>
+		</div>
+
+
+	 <div id="side">
+		<%= render(:partial => 'shared/side2') %>
+	  </div>
+	  <div class="clear"></div>
+	</div>
+	</div>
+
+		<div id='footer'>
+			<p>CENTRE D'ETUDES SUR LE CONGO(RDC) -CCS </p>
+		</div>
+                </div>
+  </body>
+</html>
