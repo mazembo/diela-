@@ -1,0 +1,44 @@
+<h1>Listing papiers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Admin</th>
+    <th>Picture</th>
+    <th>Picture2</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Author name</th>
+    <th>Author email</th>
+    <th>Author organisation</th>
+    <th>Language</th>
+    <th>Position</th>
+  </tr>
+
+<% @papiers.each do |papier| %>
+  <tr>
+    <td><%=h papier.name %></td>
+    <td><%=h papier.title %></td>
+    <td><%=h papier.body %></td>
+    <td><%=h papier.admin %></td>
+    <td><%=h papier.picture %></td>
+    <td><%=h papier.picture2 %></td>
+    <td><%=h papier.description %></td>
+    <td><%=h papier.category %></td>
+    <td><%=h papier.author_name %></td>
+    <td><%=h papier.author_email %></td>
+    <td><%=h papier.author_organisation %></td>
+    <td><%=h papier.language %></td>
+    <td><%=h papier.position %></td>
+    <td><%= link_to 'Show', papier %></td>
+    <td><%= link_to 'Edit', edit_papier_path(papier) %></td>
+    <td><%= link_to 'Destroy', papier, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New papier', new_papier_path %>

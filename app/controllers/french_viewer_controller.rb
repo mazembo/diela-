@@ -1,13 +1,12 @@
 class FrenchViewerController < ApplicationController
-  
-def showE
+
+def show
    @paper = Paper.find_by_id(params[:id])
    @comment = Comment.new
-
   end
 
   def index
-  @papers = Paper.paginated_search (params[:search], params[:page])
+  @papiers = Papier.paginated_search(params[:search], params[:page])
 
   end
 

@@ -1,0 +1,64 @@
+<h1>Editing papier</h1>
+
+<% form_for(@papier) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :admin %><br />
+    <%= f.check_box :admin %>
+  </p>
+  <p>
+    <%= f.label :picture %><br />
+    <%= f.text_field :picture %>
+  </p>
+  <p>
+    <%= f.label :picture2 %><br />
+    <%= f.text_field :picture2 %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.label :author_name %><br />
+    <%= f.text_field :author_name %>
+  </p>
+  <p>
+    <%= f.label :author_email %><br />
+    <%= f.text_field :author_email %>
+  </p>
+  <p>
+    <%= f.label :author_organisation %><br />
+    <%= f.text_field :author_organisation %>
+  </p>
+  <p>
+    <%= f.label :language %><br />
+    <%= f.text_field :language %>
+  </p>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @papier %> |
+<%= link_to 'Back', papiers_path %>

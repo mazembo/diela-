@@ -1,31 +1,31 @@
 
 
-<% form_tag ({:controller => 'viewer', :action =>'index' }, {:method => 'get'}) do %>
+<% form_tag({:controller => 'viewer', :action =>'index' }, {:method => 'get'}) do %>
   <p class="content">
 	<%= text_field_tag :search, params[:search] %>
 	<%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
 
-<% if @papers.empty? %>
-  <p class="content">No articles found. <%= link_to "See all articles.", papers_path %></p>
+<% if @papiers.empty? %>
+  <p class="content">No articles found. <%= link_to "See all articles.", papiers_path %></p>
 <% else %>
-  	<% for paper in @papers %>
+  	<% for paper in @papiers %>
 	<div class="episodes">
 	<div class="episode">
   <div class="side">
-	<div class="number">#<%= paper.position %></div>
-	<div class="published_at"><%= paper.created_at.strftime('%b %d, %Y') %></div>
-	<div class="comments_count"><%= link_to pluralize(paper.comments.size, 'comment'), paper_path(:id => paper, :anchor => 'comments') %></div>
+	<div class="number">#<%= papier.position %></div>
+	<div class="published_at"><%= papier.created_at.strftime('%b %d, %Y') %></div>
+	<div class="comments_count"><%= link_to pluralize(papier.comments.size, 'comment'), papier_path(:id => paper, :anchor => 'comments') %></div>
   </div>
   <div class="main">
-	<h2><%= link_to h(paper.title),{:controller =>'viewer', :action =>'showE', :id =>paper.id}%></h2>
+	<h2><%= link_to h(papier.title),{:controller =>'viewer', :action =>'show', :id =>papier.id}%></h2>
 	<table>
 		<tr>
-	<td><div> <img class="list-image" src="<%= paper.picture %>"/></div></td>
+	<td><div> <img class="list-image" src="<%= papier.picture %>"/></div></td>
 	<td>
-		<div class="description"><%=h paper.description %></div>
-		<div class="author">By <%=h paper.author_name %> </div>
+		<div class="description"><%=h papier.description %></div>
+		<div class="author">By <%=h papier.author_name %> </div>
 
 	</td>
 	    </tr>
@@ -36,4 +36,4 @@
 	</div>
 <% end %>
 <% end %>
-<%= will_paginate @papers %>
+<%= will_paginate @papiers %>

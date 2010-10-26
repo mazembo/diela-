@@ -46047,3 +46047,1333 @@ Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
 Processing SessionsController#new (for 127.0.0.1 at 2010-10-20 23:23:20) [GET]
 Rendering sessions/new
 Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (47.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:54:20) [GET]
+  [4;35;1mPaper Load (93.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (32.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (63.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (63.0ms)
+Rendered shared/_side2 (188.0ms)
+Completed in 1204ms (View: 969, DB: 235) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:06) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:09) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:38) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (31.0ms)
+Rendered shared/_side (78.0ms)
+Completed in 344ms (View: 313, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:41) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:43) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (15.0ms)
+Rendered shared/_side (15.0ms)
+Completed in 62ms (View: 15, DB: 16) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:46) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:49) [GET]
+  [4;36;1mPaper Load (15.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 157ms (View: 32, DB: 15) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:50) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 46ms (View: 16, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:52) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:53) [GET]
+  [4;35;1mPaper Load (16.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 17:55:55) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:08:38) [GET]
+  [4;35;1mPaper Load (16.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (47.0ms)
+Rendered shared/_side (63.0ms)
+Completed in 1938ms (View: 1047, DB: 47) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:08:41) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:09:07) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 156ms (View: 62, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:20:46) [GET]
+  [4;36;1mPaper Load (47.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (32.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (15.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 157ms (View: 47, DB: 109) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:28:44) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 30, DB: 16) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:30:01) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:31:17) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:32:54) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:33:32) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (15.0ms)
+Rendered shared/_side (15.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:34:05) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:35:35) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 18:36:34) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2010-10-25 19:27:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPaper Columns (78.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = '1') LIMIT 1[0m
+  [4;35;1mComment Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+Rendering viewer/showE
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+Completed in 313ms (View: 157, DB: 109) | 200 OK [http://localhost/viewer/showE/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ViewerController#showE (for 127.0.0.1 at 2010-10-25 19:28:00) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (`papers`.`id` = '2') LIMIT 1[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+Rendering viewer/showE
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Completed in 78ms (View: 32, DB: 0) | 200 OK [http://localhost/viewer/showE/2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:30:06) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:30:08) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:33:39) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 15, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:34:53) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:35:01) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:39:32) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:47:22) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (15.0ms)
+Rendered shared/_side2 (15.0ms)
+Completed in 62ms (View: 15, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:48:26) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:49:40) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:50:10) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaper Load (16.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:50:34) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 32, DB: 15) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:51:16) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:52:23) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:52:28) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 219ms (View: 187, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 19:56:44) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (15.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:57:52) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:59:25) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:59:32) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:59:39) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (16.0ms)
+Rendered shared/_side2 (16.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 19:59:46) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:00:57) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 62ms (View: 30, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:00:59) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:02:34) [GET]
+  [4;35;1mPaper Load (15.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 32, DB: 15) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:02:35) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:02:47) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 172ms (View: 47, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:03:09) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 15, DB: 32) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:04:09) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (`papers`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (671.0ms)[0m   [0;1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (579.0ms)[0m   [0mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.0ms)[0m   [0mSELECT version FROM `schema_info`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (172.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('22')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('1')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('2')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('3')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('4')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('5')[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('6')[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('7')[0m
+  [4;35;1mSQL (63.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('8')[0m
+  [4;36;1mSQL (46.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('9')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('10')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('11')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('12')[0m
+  [4;36;1mSQL (47.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('13')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('14')[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('15')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('16')[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('17')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('18')[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('19')[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20')[0m
+  [4;36;1mSQL (62.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('21')[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mDROP TABLE `schema_info`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreatePapers (1)
+Migrating to CreateUsers (2)
+Migrating to AddDefaultUser (3)
+Migrating to AddAdminAttributeToPages (4)
+Migrating to AddSubpages (5)
+Migrating to AddAuthorDescriptionPicture (6)
+Migrating to AddAttributeCategory (7)
+Migrating to CreateComments (8)
+Migrating to CreateAuthors (9)
+Migrating to RemoveAuthorIn (10)
+Migrating to RemoveColumnsParentsNavlabelPosition (11)
+Migrating to AuthorsPapers (12)
+Migrating to RemoveAuthorIdFromPaper (13)
+Migrating to AddAuthorNameEmailOrganisationToPaper (14)
+Migrating to RemoveCommentAttribute (15)
+Migrating to AddColumnLanguage (16)
+Migrating to AddPositionColumn (17)
+Migrating to AddColumnsForComments (18)
+Migrating to AddColumnsPublishedDateInPapers (19)
+Migrating to AddColumnWhereFromInComment (20)
+Migrating to AddPicture2Column (21)
+Migrating to CreateContacts (22)
+Migrating to CreatePapiers (20101025183510)
+  [4;35;1mSQL (218.0ms)[0m   [0mCREATE TABLE `papiers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `title` varchar(255), `body` text, `admin` tinyint(1), `picture` varchar(255), `picture2` varchar(255), `description` text, `category` varchar(255), `author_name` varchar(255), `author_email` varchar(255), `author_organisation` varchar(255), `language` varchar(255), `position` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (63.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20101025183510')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mSHOW FIELDS FROM `authors`[0m
+  [4;35;1mSQL (94.0ms)[0m   [0mdescribe `authors`[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSHOW KEYS FROM `authors`[0m
+  [4;35;1mSQL (141.0ms)[0m   [0mSHOW FIELDS FROM `authors_papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `authors_papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `authors_papers`[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `comments`[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mSHOW FIELDS FROM `contacts`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `contacts`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `contacts`[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mSHOW FIELDS FROM `pages`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `pages`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `pages`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papiers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `papiers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `papiers`[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mSHOW FIELDS FROM `sheets`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `sheets`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `sheets`[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:33) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (16.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (31.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (15.0ms)
+Rendered shared/_side (125.0ms)
+Completed in 437ms (View: 359, DB: 47) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:37) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:39) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:43) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:47) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 157ms (View: 32, DB: 15) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:50) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (16.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:51) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:54) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (15.0ms)
+Rendered shared/_side (15.0ms)
+Completed in 46ms (View: 46, DB: 0) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:46:56) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 156ms (View: 0, DB: 15) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-25 20:47:01) [GET]
+
+SyntaxError (C:/rails/CentreCongoStudies/app/controllers/french_viewer_controller.rb:23: syntax error, unexpected kEND, expecting $end):
+  C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:49:08) [GET]
+  [4;35;1mPapier Load (0.0ms)[0m   [0mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.empty?) on line #10 of app/views/french_viewer/index.html.erb:
+7:   </p>
+8: <% end %>
+9: 
+10: <% if @papers.empty? %>
+11:   <p class="content">No articles found. <%= link_to "See all articles.", papers_path %></p>
+12: <% else %>
+13:   	<% for paper in @papers %>
+
+    app/views/french_viewer/index.html.erb:10
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (110.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:53:26) [GET]
+  [4;35;1mPapier Load (0.0ms)[0m   [0mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+Rendered shared/_navigation (32.0ms)
+Rendered shared/_side2 (63.0ms)
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:54:04) [GET]
+  [4;35;1mPapier Load (0.0ms)[0m   [0mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 20:54:07) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 20:54:10) [GET]
+  [4;36;1mPapier Load (0.0ms)[0m   [0;1mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:40:58) [GET]
+  [4;36;1mPaper Load (31.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 110ms (View: 32, DB: 62) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 21:41:46) [GET]
+  [4;35;1mPapier Load (15.0ms)[0m   [0mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 140ms (View: 125, DB: 15) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:41:50) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 21:43:38) [GET]
+  [4;36;1mPapier Load (0.0ms)[0m   [0;1mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+Rendered shared/_navigation (15.0ms)
+Rendered shared/_side2 (15.0ms)
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:43:42) [GET]
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mComment Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `comments`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 46ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing FrenchViewerController#index (for 127.0.0.1 at 2010-10-25 21:45:30) [GET]
+  [4;35;1mPapier Load (0.0ms)[0m   [0mSELECT * FROM `papiers` WHERE (category = 'article') LIMIT 0, 2[0m
+Rendering template within layouts/french_viewer
+Rendering french_viewer/index
+Rendered shared/_navigation (0.0ms)
+Rendered shared/_side2 (0.0ms)
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:45:38) [GET]
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (15.0ms)
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:22) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:26) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (16.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:29) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 0, DB: 31) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:32) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (16.0ms)
+Completed in 63ms (View: 32, DB: 0) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:35) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 0, DB: 31) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:36) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (0.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 62ms (View: 30, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:41) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mPaper Load (0.0ms)[0m   [0;1mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 2, 2[0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;35;1mPaper Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `papers`[0m
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 3) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/english_viewer?page=2]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing EnglishViewerController#index (for 127.0.0.1 at 2010-10-25 21:47:44) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mPaper Load (16.0ms)[0m   [0mSELECT * FROM `papers` WHERE (category = 'article') LIMIT 0, 2[0m
+  [4;36;1mPaper Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `papers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `papers` WHERE (category = 'article') [0m
+Rendering template within layouts/english_viewer
+Rendering english_viewer/index
+  [4;36;1mComment Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `comments`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `comments` WHERE (`comments`.paper_id = 2) [0m
+Rendered shared/_navigation2 (0.0ms)
+Rendered shared/_side (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/english_viewer?page=1]

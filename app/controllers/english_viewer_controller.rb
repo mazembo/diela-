@@ -7,7 +7,7 @@ def showE
   end
 
   def index
-  @papers = Paper.paginated_search (params[:search], params[:page])
+  @papers = Paper.paginated_search(params[:search], params[:page])
 
   end
 
