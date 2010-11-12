@@ -1,3 +1,6 @@
 rails --version 2.3.2 
 will_paginate --version 2.3.11
 will_paginate --version 2.3.14
+RedCloth
+acts_as_list
+mislav-will_paginate
