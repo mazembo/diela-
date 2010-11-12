@@ -1,0 +1,36 @@
+<h1>Editing spam_report</h1>
+
+<% form_for(@spam_report) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :comment_id %><br />
+    <%= f.text_field :comment_id %>
+  </p>
+  <p>
+    <%= f.label :comment_ip %><br />
+    <%= f.text_field :comment_ip %>
+  </p>
+  <p>
+    <%= f.label :comment_site_url %><br />
+    <%= f.text_field :comment_site_url %>
+  </p>
+  <p>
+    <%= f.label :comment_name %><br />
+    <%= f.text_field :comment_name %>
+  </p>
+  <p>
+    <%= f.label :user_ip %><br />
+    <%= f.text_field :user_ip %>
+  </p>
+  <p>
+    <%= f.label :confirmed_at %><br />
+    <%= f.datetime_select :confirmed_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @spam_report %> |
+<%= link_to 'Back', spam_reports_path %>

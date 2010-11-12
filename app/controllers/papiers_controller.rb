@@ -1,4 +1,5 @@
 class PapiersController < ApplicationController
+   layout "french_viewer"
   # GET /papiers
   # GET /papiers.xml
   def index

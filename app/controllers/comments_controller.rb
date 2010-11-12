@@ -1,11 +1,16 @@
 class CommentsController < ApplicationController
 
 def create 
-@comment = Comment.create!(params[:comment])
-flash[:notice] = "Thank you for commenting this article"
-respond_to do |format|
-  format.html { redirect_to (:controller => 'viewer', :action => 'index') }
-  format.js
-  end
- end
+@comment = Comment.new(params[:comment])
+@comment.request = request
+if @comment.save
+ flash[:notice] = "Successfully created comment."
+        redirect_to(:controller => "english_viewer", :action => "index")
+      else
+        flash[:notice] = "Your comment has not been created. Start over again"
+        render(:controller => "english_viewer", :action => "index")
+      end
+   
+    end
+
 end

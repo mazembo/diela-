@@ -1,0 +1,38 @@
+<h1>Listing commentaires</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Papier</th>
+    <th>Text</th>
+    <th>User ip</th>
+    <th>User agent</th>
+    <th>Where from</th>
+    <th>Position</th>
+    <th>Referrer</th>
+    <th>Site url</th>
+  </tr>
+
+<% @commentaires.each do |commentaire| %>
+  <tr>
+    <td><%=h commentaire.name %></td>
+    <td><%=h commentaire.email %></td>
+    <td><%=h commentaire.papier_id %></td>
+    <td><%=h commentaire.text %></td>
+    <td><%=h commentaire.user_ip %></td>
+    <td><%=h commentaire.user_agent %></td>
+    <td><%=h commentaire.where_from %></td>
+    <td><%=h commentaire.position %></td>
+    <td><%=h commentaire.referrer %></td>
+    <td><%=h commentaire.site_url %></td>
+    <td><%= link_to 'Show', commentaire %></td>
+    <td><%= link_to 'Edit', edit_commentaire_path(commentaire) %></td>
+    <td><%= link_to 'Destroy', commentaire, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New commentaire', new_commentaire_path %>

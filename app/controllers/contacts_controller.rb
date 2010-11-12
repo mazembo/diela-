@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+   layout "english_viewer"
   # GET /contacts
   # GET /contacts.xml
   def index
@@ -24,8 +25,9 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   # GET /contacts/new.xml
   def new
+    
     @contacts = Contacts.new
-
+   
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @contacts }
@@ -45,10 +47,10 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contacts.save
         flash[:notice] = 'Thanks for writing to us. We will respond to you diligently if necessary.'
-        format.html { redirect_to (:controller => 'viewer', :action => 'index') }
+        format.html{ redirect_to(:controller => 'english_viewer', :action => 'index') }
         format.xml  { render :xml => @contacts, :status => :created, :location => @contacts }
       else
-        format.html { render :action => "new" }
+        format.html { render(:controller => "contacts", :action => "new") }
         format.xml  { render :xml => @contacts.errors, :status => :unprocessable_entity }
       end
     end

@@ -5,5 +5,7 @@ class AddColumnsForComments < ActiveRecord::Migration
   end
 
   def self.down
+  remove_column :comments, :user_ip
+  remove_column :comments, :user_agent
   end
 end

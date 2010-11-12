@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title><%= @pagetitle || (@page && @page.title)|| "CENTRE D'ETUDES SUR LE CONGO (RDC)" %></title>
-		<%= stylesheet_link_tag 'learningrails', 'application' %>
+		<%= stylesheet_link_tag  'application' %>
 
   </head>
   <body>
@@ -18,15 +18,13 @@
 			 </div>
 			<div id='navbar'>
 				<ul>
-			<li><%= link_to 'Nouvelles', {:controller =>'french_viewer', :action =>'index'} %></li>
+			<li><%= link_to 'Accueil', {:controller =>'french_viewer', :action =>'index'} %></li>
 			<li><%= link_to 'Articles', {:controller =>'french_viewer', :action =>'articles'} %></li>
 			<li><%= link_to 'Publications', {:controller =>'french_viewer', :action =>'publications'} %></li>
 			<li><%= link_to 'Bibliotheque', {:controller =>'french_viewer', :action =>'bibliotheque'} %></li>
 			<li><%= link_to 'Evenements', {:controller =>'french_viewer', :action =>'evenements'} %></li>
 			<li><%= link_to 'Multimedia', {:controller =>'french_viewer', :action =>'multimedia'} %></li>
-			<li><%= link_to 'Themes', {:controller =>'french_viewer', :action =>'themes'} %></li>
-                        <li><%= link_to 'Dons', {:controller =>'french_viewer', :action =>'dons'} %></li>
-                        <li><%= link_to 'Abonnement', {:controller =>'french_viewer', :action => 'abonnement'} %></li>
+			<li><%= link_to 'Abonnement', {:controller =>'french_viewer', :action => 'abonnement'} %></li>
 			<li><%= link_to 'Contactez-nous', {:controller =>'Contacts', :action =>'new'} %></li>
 					<li><% if logged_in? %>
 								<%= link_to "deconnexion", logout_path %>
@@ -34,10 +32,10 @@
 								<%= link_to "se connecter", login_path %>
 							<% end %>
 					</li>
+                        <li><%= link_to 'Nous Soutenir', {:controller =>'french_viewer', :action =>'nous_soutenir'} %></li>
                         <li><%= link_to 'English', {:controller =>'english_viewer', :action => 'index'} %></li>
 				</ul>
-		  <div>
-		</div>
+                        </div>
 		<div id="container">
 		<div id="main">
 		<div id='content1'>
@@ -58,6 +56,6 @@
 		<div id='footer'>
 			<p>CENTRE D'ETUDES SUR LE CONGO(RDC) -CCS </p>
 		</div>
-                </div>
+                
   </body>
 </html>

@@ -13,6 +13,9 @@
     <th>author's name</th>
     <th>author's email</th>
     <th>author's organisation</th>
+    <th>Position </th>
+
+    <th></th>
   </tr>
 
 <% for paper in @papers %>
@@ -28,7 +31,8 @@
     <td><%=h paper.admin? ? "TRUE" : "FALSE" %></td>
     <td><%=h paper.author_name %></td>
     <td><%=h paper.author_email %></td>
-    <td><%=h paper.author_organisation %></td> 
+    <td><%=h paper.author_organisation %></td>
+    <td><%=h paper.position %></td>
     <td><%= link_to 'Show', paper %></td>
     <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
     <td><%= link_to 'Destroy', paper, :confirm => 'Are you sure?', :method => :delete %></td>

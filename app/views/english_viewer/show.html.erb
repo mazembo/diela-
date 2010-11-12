@@ -1,2 +1,33 @@
-<h1>EnglishViewer#show</h1>
-<p>Find me in app/views/english_viewer/show.html.erb</p>
+    <% form_tag papers_path, :method => 'get' do %>
+  <p class="content">
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<div class="episodes">
+<div class="side">
+
+</div>
+<div class="main">
+	<h1><%=h @paper.title %><h1>
+	<div> <img class="list-image" src="<%= @paper.picture2 %>"/></div>
+	</div>
+<div class="notes">
+	<%= textilize @paper.body %>
+</div>
+	<div class="clear"></div>
+	<div class="author">By <%=h @paper.author_name %>, <%=h @paper.author_email %>,from<%=h @paper.author_organisation %></div>
+	<div class="published_at">Published on <%= @paper.published_at.strftime('%b %d, %Y') %></div>
+ </div>
+<% unless @paper.comments.empty? %>
+  <h3 class="content" id="comment_count">
+	<%= pluralize @paper.comments.size, 'comment' %>
+  </h3>
+  <div id="comments" class="content">
+  <%= render :partial => 'comments/comment', :collection => @paper.comments %>
+  </div>
+<% end %>
+<div class="content add_comment">
+  <h3>Add your comment:</h3>
+  <%= render :partial => 'comments/form' %>
+</div>

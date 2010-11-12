@@ -1,0 +1,53 @@
+<p>
+  <b>Name:</b>
+  <%=h @commentaire.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @commentaire.email %>
+</p>
+
+<p>
+  <b>Papier:</b>
+  <%=h @commentaire.papier_id %>
+</p>
+
+<p>
+  <b>Text:</b>
+  <%=h @commentaire.text %>
+</p>
+
+<p>
+  <b>User ip:</b>
+  <%=h @commentaire.user_ip %>
+</p>
+
+<p>
+  <b>User agent:</b>
+  <%=h @commentaire.user_agent %>
+</p>
+
+<p>
+  <b>Where from:</b>
+  <%=h @commentaire.where_from %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%=h @commentaire.position %>
+</p>
+
+<p>
+  <b>Referrer:</b>
+  <%=h @commentaire.referrer %>
+</p>
+
+<p>
+  <b>Site url:</b>
+  <%=h @commentaire.site_url %>
+</p>
+
+
+<%= link_to 'Edit', edit_commentaire_path(@commentaire) %> |
+<%= link_to 'Back', commentaires_path %>

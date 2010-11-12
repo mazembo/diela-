@@ -1,2 +1,33 @@
-<h1>FrenchViewer#show</h1>
-<p>Find me in app/views/french_viewer/show.html.erb</p>
+ <% form_tag papiers_path, :method => 'get' do %>
+  <p class="content">
+	<%= text_field_tag :search, params[:search] %>
+	<%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+<div class="episodes">
+<div class="side">
+
+</div>
+<div class="main">
+	<h1><%=h @papier.title %><h1>
+	<div> <img class="list-image" src="<%= @papier.picture2 %>"/></div>
+	</div>
+<div class="notes">
+	<%= textilize @papier.body %>
+</div>
+	<div class="clear"></div>
+	<div class="author">By <%=h @papier.author_name %>, <%=h @papier.author_email %>,from<%=h @papier.author_organisation %></div>
+	<div class="published_at">Published on <%= @papier.published_at.strftime('%b %d, %Y') %></div>
+ </div>
+<% unless @papier.commentaires.empty? %>
+  <h3 class="content" id="comment_count">
+	<%= pluralize @papier.commentaires.size, 'commentaire' %>
+  </h3>
+  <div id="comments" class="content">
+  <%= render :partial => 'commentaires/commentaire', :collection => @papier.commentaires %>
+  </div>
+<% end %>
+<div class="content add_comment">
+  <h3>Add your comment:</h3>
+  <%= render :partial => 'commentaires/form' %>
+</div>

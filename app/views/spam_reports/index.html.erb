@@ -1,0 +1,30 @@
+<h1>Listing spam_reports</h1>
+
+<table>
+  <tr>
+    <th>Comment</th>
+    <th>Comment ip</th>
+    <th>Comment site url</th>
+    <th>Comment name</th>
+    <th>User ip</th>
+    <th>Confirmed at</th>
+  </tr>
+
+<% @spam_reports.each do |spam_report| %>
+  <tr>
+    <td><%=h spam_report.comment_id %></td>
+    <td><%=h spam_report.comment_ip %></td>
+    <td><%=h spam_report.comment_site_url %></td>
+    <td><%=h spam_report.comment_name %></td>
+    <td><%=h spam_report.user_ip %></td>
+    <td><%=h spam_report.confirmed_at %></td>
+    <td><%= link_to 'Show', spam_report %></td>
+    <td><%= link_to 'Edit', edit_spam_report_path(spam_report) %></td>
+    <td><%= link_to 'Destroy', spam_report, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New spam_report', new_spam_report_path %>

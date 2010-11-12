@@ -16,6 +16,10 @@
     <%= f.text_area :body %>
   </p>
   <p>
+      <%= f.label :label_names, 'Labels' %><br />
+      <%= f.text_field :label_names %>
+    </p>
+  <p>
     <%= f.label :admin %><br />
     <%= f.check_box :admin %>
   </p>
@@ -55,6 +59,10 @@
     <%= f.label :position %><br />
     <%= f.text_field :position %>
   </p>
+  <p>
+      <%= f.label :published_at, 'Date de publication ' %><br />
+      <%= f.date_select :published_at %>
+    </p>
   <p>
     <%= f.submit 'Create' %>
   </p>

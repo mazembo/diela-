@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :labels
+
+  map.resources :commentaires
+
+  map.resources :spam_reports
+
+  map.resources :tags
+
   map.resources :papiers
 
   map.resources :contacts

@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  papier_id: 1
+  label_id: 1
+
+two:
+  papier_id: 1
+  label_id: 1

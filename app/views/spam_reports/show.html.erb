@@ -1,0 +1,33 @@
+<p>
+  <b>Comment:</b>
+  <%=h @spam_report.comment_id %>
+</p>
+
+<p>
+  <b>Comment ip:</b>
+  <%=h @spam_report.comment_ip %>
+</p>
+
+<p>
+  <b>Comment site url:</b>
+  <%=h @spam_report.comment_site_url %>
+</p>
+
+<p>
+  <b>Comment name:</b>
+  <%=h @spam_report.comment_name %>
+</p>
+
+<p>
+  <b>User ip:</b>
+  <%=h @spam_report.user_ip %>
+</p>
+
+<p>
+  <b>Confirmed at:</b>
+  <%=h @spam_report.confirmed_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_spam_report_path(@spam_report) %> |
+<%= link_to 'Back', spam_reports_path %>

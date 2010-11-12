@@ -1,22 +1,32 @@
 class FrenchViewerController < ApplicationController
 
-def show
-   @paper = Paper.find_by_id(params[:id])
-   @comment = Comment.new
-  end
-
-  def index
+ def index
   @papiers = Papier.paginated_search(params[:search], params[:page])
 
   end
 
-  def homef
-  @paper = Paper.find(:all,
-                      :conditions => ["category = 'article' and language = 'french'"])
+   def show
+   @papier = Papier.find_by_id(params[:id])
+   @commentaire = Commentaire.new(:papier => @papier)
   end
+  def articles
 
-  def show
-   @paper = Paper.find_by_name(params[:name])
+   end
 
-  end
+   def publications
+
+   end
+
+   def bibliotheque
+   end
+
+   def evenements
+   end
+
+   def abonnement
+   end
+
+   def nous_soutenir
+
+   end
 end

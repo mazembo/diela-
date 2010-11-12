@@ -1,10 +1,6 @@
 class PapersController < ApplicationController
- 
- before_filter :loadmetadata
-
- def loadmetadata
- @pagetitle = "Page Administration"
- end
+  layout "english_viewer"
+   
   # GET /papers
   # GET /papers.xml
   def index

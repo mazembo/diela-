@@ -1,15 +1,31 @@
+<% @comment_counter ||= 0 -%>
+<% @comment_counter += 1 -%>
+<%= tag :hr if @comment_counter > 1 %>
+<% div_for comment do %>
+  <%- if comment.paper && !current_page?(comment.paper) -%>
+    <h4>
+      Article #<%= comment.paper.position %>:
+      <%= link_to h(comment.paper.name), paper_path(:id => comment.paper, :anchor => dom_id(comment)) %>
+    </h4>
+  <%- end -%>
+  <%- if comment.position -%>
+    <span class="position"><%= comment.position %>.</span>
+  <%- end -%>
+  <span class="name">
+    <%= link_to_unless comment.site_url.blank?, h(comment.name), h(comment.site_url), :rel => "nofollow" %>
+  </span>
+  <%- unless comment.created_at.nil? -%>
+    <span class="created_at">
+      <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %>
+    </span>
+  <%- end -%>
+  <div class="comment_content">
+    <%= format_comment(comment.text) %>
+  </div>
+  <div class="actions">
+    <%= link_to "Report as Spam", spam_reports_path(:comment_id => comment), :method => :post, :class => 'spam_report' %>
+  </div>
+
+<% end %>
 
   
-    <p>
-      <b>Commenter:</b>
-      <%=h comment.name %> </b>
-      <%=h comment.email %>
-    </p>
-
-    <p>
-      <b>Comment:</b>
-      <%=h comment.text %> </b>
-      <%=h comment.created_at.strftime('%b %d, %Y') %>
-    </p>
-    
-

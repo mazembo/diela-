@@ -1,0 +1,31 @@
+<% @commentaire_counter ||= 0 -%>
+<% @commentaire_counter += 1 -%>
+<%= tag :hr if @commentaire_counter > 1 %>
+<% div_for commentaire do %>
+  <%- if commentaire.papier && !current_page?(commentaire.papier) -%>
+    <h4>
+      Article #<%= commentaire.papier.position %>:
+      <%= link_to h(commentaire.papier.name), papier_path(:id => commentaire.papier, :anchor => dom_id(commentaire)) %>
+    </h4>
+  <%- end -%>
+  <%- if commentaire.position -%>
+    <span class="position"><%= commentaire.position %>.</span>
+  <%- end -%>
+  <span class="name">
+    <%= link_to_unless commentaire.site_url.blank?, h(commentaire.name), h(commentaire.site_url), :rel => "nofollow" %>
+  </span>
+  <%- unless commentaire.created_at.nil? -%>
+    <span class="created_at">
+      <%= commentaire.created_at.strftime('%b %d, %Y at %H:%M') %>
+    </span>
+  <%- end -%>
+  <div class="comment_content">
+    <%= format_comment(commentaire.text) %>
+  </div>
+  <div class="actions">
+    <%= link_to "Report as Spam", spam_reports_path(:commentaire_id => commentaire), :method => :post, :class => 'spam_report' %>
+  </div>
+
+<% end %>
+
+  

@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  papier_id: 1
+  text: MyText
+  user_ip: MyString
+  user_agent: MyString
+  where_from: MyString
+  position: 1
+  referrer: MyString
+  site_url: MyString
+
+two:
+  name: MyString
+  email: MyString
+  papier_id: 1
+  text: MyText
+  user_ip: MyString
+  user_agent: MyString
+  where_from: MyString
+  position: 1
+  referrer: MyString
+  site_url: MyString

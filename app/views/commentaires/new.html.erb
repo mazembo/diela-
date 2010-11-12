@@ -1,0 +1,51 @@
+<h1>New commentaire</h1>
+
+<% form_for(@commentaire) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :papier_id %><br />
+    <%= f.text_field :papier_id %>
+  </p>
+  <p>
+    <%= f.label :text %><br />
+    <%= f.text_area :text %>
+  </p>
+  <p>
+    <%= f.label :user_ip %><br />
+    <%= f.text_field :user_ip %>
+  </p>
+  <p>
+    <%= f.label :user_agent %><br />
+    <%= f.text_field :user_agent %>
+  </p>
+  <p>
+    <%= f.label :where_from %><br />
+    <%= f.text_field :where_from %>
+  </p>
+  <p>
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </p>
+  <p>
+    <%= f.label :referrer %><br />
+    <%= f.text_field :referrer %>
+  </p>
+  <p>
+    <%= f.label :site_url %><br />
+    <%= f.text_field :site_url %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', commentaires_path %>

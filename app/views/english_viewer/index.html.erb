@@ -14,10 +14,10 @@
   <div class="side">
 	<div class="number">#<%= paper.position %></div>
 	<div class="published_at"><%= paper.created_at.strftime('%b %d, %Y') %></div>
-	<div class="comments_count"><%= link_to pluralize(paper.comments.size, 'comment'), paper_path(:id => paper, :anchor => 'comments') %></div>
+	<div class="comments_count"><%= link_to pluralize(paper.comments.size, 'comment'), {:controller =>'english_viewer', :action =>'show', :id =>paper.id} %></div>
   </div>
   <div class="main">
-	<h2><%= link_to h(paper.title),{:controller =>'viewer', :action =>'showE', :id =>paper.id}%></h2>
+	<h2><%= link_to h(paper.title),{:controller =>'english_viewer', :action =>'show', :id =>paper.id}%></h2>
 	<table>
 		<tr>
 	<td><div> <img class="list-image" src="<%= paper.picture %>"/></div></td>
