@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/rails/CentreCongoStudies/app/views/layouts/english_viewer.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/shared/_side.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/shared/_side2.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/layouts/french_viewer.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/english_viewer_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/french_viewer_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/english_viewer/support_us.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/english_viewer/research_papers.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/french_viewer/nous_soutenir.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/contacts_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/contacts/new.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/sessions_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/users_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/papers_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/controllers/papiers_controller.rb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/english_viewer/index.html.erb</file>
+        <file>file:/C:/rails/CentreCongoStudies/app/views/french_viewer/index.html.erb</file>
+    </open-files>
 </project-private>
