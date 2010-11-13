@@ -3,3 +3,4 @@ will_paginate --version 2.3.11
 will_paginate --version 2.3.14
 RedCloth
 ryanb-acts-as-list --source gems.github.com
+acts_as_list 
