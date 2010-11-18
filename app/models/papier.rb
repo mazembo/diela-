@@ -12,11 +12,11 @@ class Papier < ActiveRecord::Base
   def self.paginated_search(search, page)
   if search
     paginate :per_page => 4, :page =>page,
-             :conditions => ["category = 'article'" && 'title LIKE ?', "%#{search}%"]
+             :conditions => ['title LIKE ?', "%#{search}%"]
 
   else
-    paginate :per_page => 4, :page =>page,
-             :conditions => ["category = 'article'"]
+    paginate :per_page => 4, :page =>page
+             
   end
   end
 
