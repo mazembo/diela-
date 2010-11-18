@@ -9,15 +9,14 @@
 
 </div>
 <div class="main">
-	<h1><%=h @paper.title %><h1>
+	<h1><%=h @paper.title %></h1>
 	<div> <img class="list-image" src="<%= @paper.picture2 %>"/></div>
 	</div>
 <div class="notes">
 	<%= textilize @paper.body %>
 </div>
 	<div class="clear"></div>
-	<div class="author">By <%=h @paper.author_name %>, <%=h @paper.author_email %>,from<%=h @paper.author_organisation %></div>
-	<div class="published_at">Published on <%= @paper.published_at.strftime('%b %d, %Y') %></div>
+	<div class="author">By <%=h @paper.author_name %>, Published on <%= @paper.published_at.strftime('%b %d, %Y') %></div>
  </div>
 <% unless @paper.comments.empty? %>
   <h3 class="content" id="comment_count">

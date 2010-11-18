@@ -9,15 +9,15 @@
 
 </div>
 <div class="main">
-	<h1><%=h @papier.title %><h1>
-	<div> <img class="list-image" src="<%= @papier.picture2 %>"/></div>
+	<h1><%=h @papier.title %></h1>
+	<div><img class="list-image" src="<%= @papier.picture2 %>"/></div>
 	</div>
 <div class="notes">
 	<%= textilize @papier.body %>
 </div>
 	<div class="clear"></div>
-	<div class="author">By <%=h @papier.author_name %>, <%=h @papier.author_email %>,from<%=h @papier.author_organisation %></div>
-	<div class="published_at">Published on <%= @papier.published_at.strftime('%b %d, %Y') %></div>
+	<div class="author">By <%=h @papier.author_name %>, Date de publication:  <%= @papier.published_at.strftime('%b %d, %Y') %></div>
+
  </div>
 <% unless @papier.commentaires.empty? %>
   <h3 class="content" id="comment_count">
