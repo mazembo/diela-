@@ -1,4 +1,5 @@
 class PapersController < ApplicationController
+  before_filter :login_required
   layout "english_viewer"
    
   # GET /papers

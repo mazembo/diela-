@@ -1,4 +1,5 @@
 class PapiersController < ApplicationController
+  before_filter :login_required
    layout "french_viewer"
   # GET /papiers
   # GET /papiers.xml
