@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   layout "english_viewer"
   # Be sure to include AuthenticationSystem in Application Controller instead
-  # before_filter :login_required
+  before_filter :login_required
   include AuthenticatedSystem
 
   def index
