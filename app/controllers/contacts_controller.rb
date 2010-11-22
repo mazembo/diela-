@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
    layout "english_viewer"
-   before_filter :login_required
+   
   # GET /contacts
   # GET /contacts.xml
   def index
